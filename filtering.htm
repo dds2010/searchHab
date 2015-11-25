@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id='Description'>Recherche Maison</title>
+    <link rel="stylesheet" href="jqwidgets-ver3.9.1/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxdata.js"></script> 
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.filter.js"></script>
+      <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.sort.js"></script>
+
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.edit.js"></script>  
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxnumberinput.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.selection.js"></script> 
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/globalization/globalize.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxdatetimeinput.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="jqwidgets-ver3.9.1/scripts/demos.js"></script>
+
+    <style type="text/css">
+    img{
+        height:180px;
+    }
+
+    #pagerjqxgrid{
+        width:20% !Important;
+    }
+    </style>
+ <!--   <script type="text/javascript" src="jqwidgets-ver3.9.1/demos/jqxgrid/generatedata.js"></script>-->
+
+   <!--<script type="text/javascript" src="result.json"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var data = generatedata(500);
+
+            dataStored=JSON.parse(localStorage["datas_search_21_11_2015"]);
+            if(dataStored)
+            {
+                data=dataStored;
+                 console.log("retrieved from local Storage");
+            }
+                
+           
+
+
+
+
+            var source =
+            {
+                localdata: data,
+                updaterow: function (rowid, rowdata, commit) {
+                    // synchronize with the server - send update command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failder.
+                    commit(true);
+                },
+                datafields:
+                [
+                { name: 'priorite', type: 'number' },
+                { name: 'commentaire', type: 'string' },
+                { name: 'source', type: 'string' },
+                    { name: 'titre', type: 'string' },
+                    { name: 'city', type: 'string' },
+                    { name: 'image', type: 'string' },
+                    { name: 'url', type: 'string' },
+                    { name: 'description', type: 'string' },
+                    { name: 'prix', type: 'number' },
+                    { name: 'pieces', type: 'string' },
+                    { name: 'offres', type: 'string' },
+                    { name: 'dateMaj', type: 'string' },
+                    { name: 'images', type: 'string' },
+                    { name: 'surface', type: 'number' }
+                ],
+                pagesize: 20,
+                datatype: "array"
+            };
+
+            
+            var adapter = new $.jqx.dataAdapter(source);
+
+        var cellsrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+                
+                    return '<br><br><br><a target="_blank" href="' + value + '">ANNONCE</a>';
+                
+            }
+
+             var imgrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+                
+                    if(value.startsWith("htt")){
+                        return '<img height="180px" src="' + value + '" />';
+                    }
+                    else
+                    {
+                        return value;
+                    }
+                    
+                
+            }
+
+             var imglistrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+                
+                    if(value.startsWith("htt")){
+                        imageslist=value.split(",");
+                        retour="";
+                        for(var i=0;i<imageslist.length;i++){
+                               retour+= '<img height="180px" src="' + imageslist[i] + '" />';
+                        }
+                        return retour;
+                    }
+                    else
+                    {
+                        return value;
+                    }
+                    
+                
+            }
+
+            $("#jqxgrid").jqxGrid(
+            {
+                width: 4750,
+                height:1000,
+                autoheight: true,
+                autorowheight: true,
+                columnsresize: true,
+                editable:true,
+                source: adapter,
+                enabletooltips: true,
+                //selectionmode: 'multiplecellsadvanced',
+                filterable: true,
+                pageable: true,
+                sortable: true,
+                
+                autoshowfiltericon: true,
+
+
+                columns: [
+
+               
+                { text: 'source', datafield: 'source', width: 30,editable:false },
+                 { text: 'priorite', editable:true,datafield: 'priorite', columntype: 'textbox',
+                    
+                      width: 70
+                },
+                 { text: 'commentaire', editable:true,datafield: 'commentaire', columntype: 'textbox',
+                    
+                      width: 70
+                },
+                  { text: 'titre', datafield: 'titre', width: 160,editable:false },
+                  { text: 'surface', datafield: 'surface', width: 80 ,editable:false},
+                  { text: 'url', datafield: 'url', width: 60, cellsrenderer: cellsrenderer,editable:false },
+                  { text: 'city', datafield: 'city', width: 100,editable:false },
+                  { text: 'description', datafield: 'description', width: 370,editable:false },
+                  { text: 'prix', datafield: 'prix',  width: 70,editable:false },
+                  { text: 'pieces', datafield: 'pieces', width: 40,editable:false },
+                  { text: 'offres', datafield: 'offres', width: 40 ,editable:false},
+                  { text: 'dateMaj', datafield: 'dateMaj' , width: 80,editable:false},
+                  { text: 'image', datafield: 'image', width: 400, cellsrenderer: imgrenderer,editable:false },
+                  { text: 'images', datafield: 'images' ,editable:false, width: 2960,cellsrenderer: imglistrenderer}
+                ]
+            });
+
+            $('#events').jqxPanel({ width: 300, height: 80});
+
+            $("#jqxgrid").on("filter", function (event) {
+                $("#events").jqxPanel('clearcontent');
+                var filterinfo = $("#jqxgrid").jqxGrid('getfilterinformation');
+
+                var eventData = "Triggered 'filter' event";
+                for (i = 0; i < filterinfo.length; i++) {
+                    var eventData = "Filter Column: " + filterinfo[i].filtercolumntext;
+                    $('#events').jqxPanel('prepend', '<div style="margin-top: 5px;">' + eventData + '</div>');
+                }
+            });
+
+            $("#jqxgrid").on('cellendedit', function (event) {
+                var args = event.args;
+                data[args.rowindex][args.datafield]=args.value;
+                localStorage["datas_search_21_11_2015"]=JSON.stringify(data);
+                console.log("Event Type: cellendedit, Column: " + args.datafield + ", Row: " + (1 + args.rowindex) + ", Value: " + args.value);
+            });
+
+            $('#clearfilteringbutton').jqxButton({ height: 25});
+            
+            $('#filtericons').jqxCheckBox({ checked: false, height: 25});
+            // clear the filtering.
+            $('#clearfilteringbutton').click(function () {
+                $("#jqxgrid").jqxGrid('clearfilters');
+            });
+
+
+             $('#checkdoublonsbutton').click(function () {
+                for(i=0;i<data.length;i++){
+                    variable=data[i];
+                    //console.log("process "+variable.titre);
+                    for(j=0;j<data.length;j++){
+                        old_res=data[j];
+                        if(i!=j){
+                            if(variable["priorite"]!=0 && old_res["priorite"]!=0 &&  old_res["city"]==variable["city"] && old_res["prix"]==variable["prix"] && old_res["surface"]==variable["surface"] && variable["dateMaj"]!=old_res["dateMaj"]){
+                                console.log(variable["surface"]+" "+variable["city"]+" "+variable["titre"]+"("+variable["dateMaj"]+" "+variable["prix"] +") doublon de "+old_res["titre"]+"("+old_res["dateMaj"]+" "+old_res["prix"]+")")
+                            }
+                            else if(variable["priorite"]!=0 && old_res["priorite"]!=0 
+                                && old_res["city"]==variable["city"] 
+                                && old_res["titre"]==variable["titre"] && old_res["surface"]==variable["surface"] 
+                                && variable["dateMaj"]!=old_res["dateMaj"] 
+                                && Math.abs(old_res["prix"]-variable["prix"])<40000){
+                                        console.log(variable["surface"]+" "+variable["city"]+" "+variable["titre"]+"("+variable["dateMaj"]+" "+variable["prix"] +") doublon et changement de prix de "+old_res["titre"]+"("+old_res["dateMaj"]+" "+old_res["prix"]+")")
+
+                            }   
+
+
+                        }                       
+                    }
+                }
+            });
+            // show/hide filter background
+             $("#jqxgrid").jqxGrid({ showfiltercolumnbackground: false });
+            /*$('#filterbackground').on('change', function (event) {
+                $("#jqxgrid").jqxGrid({ showfiltercolumnbackground: event.args.checked });
+            });*/
+            // show/hide filter icons
+            $('#filtericons').on('change', function (event) {
+                $("#jqxgrid").jqxGrid({ autoshowfiltericon: !event.args.checked });
+            });
+        });
+    </script>
+</head>
+<body class='default'>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+        
+        <div id="eventslog" style="margin-top: 30px;">
+            <div style="width: 200px; float: left; margin-right: 10px;">
+            <input value="Remove Filter" id="clearfilteringbutton" type="button" />
+            <input value="check doublons" id="checkdoublonsbutton" type="button" />
+            <div style="margin-top: 10px;" id='filtericons'>Show All Filter Icons</div>
+            </div>
+            <div style="float: left;">
+                Event Log:
+                <div style="border: none;" id="events">
+                </div>
+            </div>
+        </div>
+        <div id="jqxgrid">
+        </div>
+    </div>
+</body>
+</html>
