@@ -18,7 +18,26 @@ if(stats.isDirectory()) {
   }
 };
 
+var getObjectList = function(file) {
+  var obj = JSON.parse(fs.readFileSync(file, 'utf8'));
+  return obj.test;
+}
+var finddoublons = function(newElem, referenceList) {
 
+  for(i=0;i<referenceList.length;i++){
+    iterator=referenceList[i];
+    
+    if(newElem.url==iterator.url)
+    {
+      return iterator;
+    }
+  }
+
+}
+var writeReference = function(reference) {
+ 
+  fs.writeFileSync("out.json", JSON.stringify(reference, null, 2));
+}
 var processFile = function(file, needle) {
   var obj = JSON.parse(fs.readFileSync(file, 'utf8'));
   console.log(obj.test);
@@ -28,8 +47,13 @@ var processFile = function(file, needle) {
     liste[i].url="toto";
   }
 
-fs.writeFileSync("out.json", JSON.stringify(obj, null, 2));
+  fs.writeFileSync("out.json", JSON.stringify(obj, null, 2));
 }
 //search(process.argv[2], process.argv[3]);
 processFile(process.argv[2], process.argv[3]);
-
+reference=getObjectList(process.argv[3]);
+firstElem=getObjectList(process.argv[2])[0];
+firstDoublon=finddoublons(firstElem,reference);
+firstDoublon["conso"]=firstElem.conso;
+console.log(firstDoublon);
+writeReference(reference);
