@@ -33,10 +33,13 @@ if [ $downloadseloger = true ]
 fi
 
 python find_seloger.py temp/search.xml "$startDate"  >> $output
+echo ",">>$output
 python find_seloger.py temp/search2.xml "$startDate" >>$output
+echo ",">>$output
 python find_seloger.py temp/search3.xml "$startDate" >>$output
+echo ",">>$output
 python find_seloger.py temp/search4.xml "$startDate" >>$output
-
+echo ",">>$output
 
 
 
@@ -57,14 +60,14 @@ do
 
 	if [ $download = true ]
 		then
-		curl $url > firstPage.html
+		curl $url > temp/firstPage.html
 	fi
 
 
 
 
 
-	gawk 'match($0, /(http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/offres.*o=[0-9]*.*)"/, a) {print a[1]}'  firstPage.html > offres.list
+	gawk 'match($0, /(http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/offres.*o=[0-9]*.*)"/, a) {print a[1]}'  temp/firstPage.html > offres.list
 
 	echo $url >> offres.list
 	sort -u offres.list > offres3.list
@@ -97,12 +100,13 @@ do
 			#echo "{">>$output
 			#echo "\"url\":\"$lineoffre\"," >>$output
 			python find.py temp/res_$counter/res_$counteroffre.html "$startDate" $lineoffre>>$output
+			#echo ",">>$output
 			#echo "</tr>">>$output
 			#echo "},">>$output
 		done
 	done
 
-
+	
 done
 
 

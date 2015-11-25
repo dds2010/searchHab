@@ -40,9 +40,12 @@ for neighbor in root.iter('annonce'):
 		print ('{')
 		print ('\"source\":\"seloger\",')
 		print '\"city\":\"'+neighbor.find('ville').text.encode('utf8')+"\","
+		
+		print '\"cp\":\"'+neighbor.find('cp').text+"\","
+		print '\"codeInsee\":\"'+neighbor.find('codeInsee').text+"\","
 		print '\"url\":\"'+neighbor.find('permaLien').text+"\","
 		print '\"idAnnonce\":\"'+neighbor.find('idAnnonce').text+"\","
-		
+		print '\"idTiers\":\"'+neighbor.find('idTiers').text+"\","
 		photos=neighbor.find('photos')
 		if(len(photos)>0):
 			print '\"image\":\"'+neighbor.find('photos')[0].find('stdUrl').text+"\","
@@ -56,11 +59,11 @@ for neighbor in root.iter('annonce'):
 		print '\"pieces\":\"'+neighbor.find('nbPiece').text+"\","
 		print '\"surface\":\"'+neighbor.find('surface').text+"\","
 		print '\"dateMaj\":\"'+datemaj+"\","
-		print '\"dateCrea\":\"'+neighbor.find('dtCreation').text+"\","
+		
 		if(len(neighbor.find('anneeconstruct'))>0):
 			print '\"anneeconstruct\":\"'+neighbor.find('anneeconstruct').text+"\","
 
-		
+		print '\"dateCrea\":\"'+neighbor.find('dtCreation').text+"\""
 		if(len(photos)>0):
 			photoList=""
 			start=""
@@ -68,7 +71,7 @@ for neighbor in root.iter('annonce'):
 				photoList+=start
 				photoList+=photo.find('stdUrl').text
 				start=","
-			print '\"images\":\"'+photoList+"\""
+			print ',\"images\":\"'+photoList+"\""
 		print '}'
 
 	
