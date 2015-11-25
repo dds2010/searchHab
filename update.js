@@ -25,8 +25,10 @@ var processFile = function(file, needle) {
   liste=obj.test;
   for(i=0;i<liste.length;i++){
     console.log(liste[i].url);
+    liste[i].url="toto";
   }
 
+fs.writeFileSync("out.json", JSON.stringify(obj, null, 2));
 }
 //search(process.argv[2], process.argv[3]);
 processFile(process.argv[2], process.argv[3]);

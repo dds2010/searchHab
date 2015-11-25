@@ -1,1 +1,1 @@
-dsqdsq
+node update.js sample.json
