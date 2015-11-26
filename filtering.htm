@@ -44,12 +44,12 @@
         $(document).ready(function () {
             //var data = generatedata(500);
 
-            dataStored=JSON.parse(localStorage["datas_search_21_11_2015"]);
+            /*dataStored=JSON.parse(localStorage["datas_search"]);
             if(dataStored)
             {
                 data=dataStored;
                  console.log("retrieved from local Storage");
-            }
+            }*/
                 
            
 
@@ -186,7 +186,7 @@
             $("#jqxgrid").on('cellendedit', function (event) {
                 var args = event.args;
                 data[args.rowindex][args.datafield]=args.value;
-                localStorage["datas_search_21_11_2015"]=JSON.stringify(data);
+                localStorage["datas_search"]=JSON.stringify(data);
                 console.log("Event Type: cellendedit, Column: " + args.datafield + ", Row: " + (1 + args.rowindex) + ", Value: " + args.value);
             });
 

@@ -64,7 +64,8 @@ matches = re.findall("<div class=\"print-image1\">(.*?)</div", filetext,flags=re
 
 if(len(matches)>0):
   image=matches[0]
-
+else:
+  image=None
 
 
 
@@ -89,7 +90,7 @@ if(dt>olddate):
   print "\"url\":\""+url+"\","
   print "\"dateMaj\":\""+infos.strip()+"\","
 
-  if(image):
+  if(image is not None):
     print "\"image\":\""+image.strip().replace('\"','\\\"')+"\","
 
 
@@ -130,7 +131,7 @@ if(dt>olddate):
 
   matches = re.findall("itemprop=\"image\" content=\"(.*?)\"", filetext,flags=re.DOTALL)
 
-  infos=matches[0]
+  #infos=matches[0]
 
   #print "<td>"+infos+"</td>"
 
