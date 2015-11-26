@@ -22,20 +22,92 @@ var getObjectList = function(file) {
   var obj = JSON.parse(fs.readFileSync(file, 'utf8'));
   return obj.test;
 }
+
+var unfirmiseCity = function(cityName) {
+
+  if(cityName=="saint_orens_de_gameville")
+  {
+    return "saint_orens_de_gameville";
+  }
+  else if(cityName=="escalquens")
+  {
+    return "Escalquens";
+  }
+  else if(cityName=="castanet_tolosan")
+  {
+    return "Castanet Tolosan";
+  }
+  else if(cityName=="Castanet Tolosan")
+  {
+    return "Castanet Tolosan";
+  }
+else if(cityName=="baziege"||cityName=="Baziège")
+  {
+    return "Baziege";
+  }
+else if(cityName=="deyme")
+  {
+    return "Deyme";
+  }
+else if(cityName=="donneville")
+  {
+    return "Donneville";
+  }
+  
+  return cityName;
+}
+var sameCity = function(newElem,oldElem) {
+  
+  newCity=unfirmiseCity(newElem.city);
+  oldCity=unfirmiseCity(oldElem.city);
+
+
+  if(newElem.city==oldElem.city){
+    return true;
+  }
+
+  return false;
+}
+
 var finddoublons = function(newElem, referenceList) {
+
 
   for(var i=0;i<referenceList.length;i++){
     iterator=referenceList[i];
-    
+     iterator.city=unfirmiseCity(iterator.city);
     if(newElem.url==iterator.url)
     {
       console.log("found: meme url");
       return iterator;
     }
-    else if(newElem.prix==iterator.prix && newElem.surface==iterator.surface && newElem.city==iterator.city && newElem.titre==iterator.titre)
+    else if(newElem.prix==iterator.prix && newElem.surface==iterator.surface && sameCity(newElem,iterator) && newElem.titre==iterator.titre)
     {
       //meme prix surface et vile
       console.log("found: meme prix surface et ville");
+      return iterator;
+    }
+    else if(newElem.ges && newElem.nrj && newElem.nrj==iterator.nrj && newElem.ges==iterator.ges && newElem.surface==iterator.surface && sameCity(newElem,iterator) && newElem.titre==iterator.titre)
+    {
+      //meme prix surface et vile
+      console.log("found: meme ges,nrj surface et ville prix:"+newElem.prix+" ancien:"+iterator.prix+" ges:"+newElem.ges );
+      return iterator;
+    }
+    else if(newElem.ges && newElem.nrj && newElem.nrj==iterator.nrj && newElem.ges==iterator.ges && newElem.surface==iterator.surface && sameCity(newElem,iterator) && newElem.titre==iterator.titre)
+    {
+      //meme prix surface et vile
+      console.log("found: meme ges,nrj surface et ville prix:"+newElem.prix+" ancien:"+iterator.prix+" ges:"+newElem.ges );
+      return iterator;
+    }
+    else if(newElem.ges && newElem.nrj && newElem.nrj==iterator.nrj && newElem.ges==iterator.ges && newElem.surface==iterator.surface && sameCity(newElem,iterator) )
+    {
+      //meme prix surface et vile
+      console.log("found: meme ges,nrj surface et ville prix:"+newElem.prix+" ancien:"+iterator.prix+" ges:"+newElem.ges );
+      return iterator;
+    }
+     else if(newElem.ges && newElem.nrj && newElem.nrj==iterator.nrj && newElem.ges==iterator.ges && newElem.surface==iterator.surface  )
+    {
+      //meme prix surface et vile
+      console.log("found: meme ges,nrj surface et ville prix:"+newElem.prix+" ancien:"+iterator.prix+" ges:"+newElem.ges );
       return iterator;
     }
     /*else if(newElem.city==iterator.city 
@@ -62,16 +134,19 @@ var updateReference = function(reference,newItem) {
  
 
   
-  if(newItem.prix!=reference.prix){
+  if(newItem.prix!=reference.prix && newItem.url==reference.url){
     reference.commentaire=reference.commentaire+" prix  le "+reference.dateMaj+" = "+reference.prix;
     reference.commentaire=reference.commentaire+" prix  le "+newItem.dateMaj+" = "+newItem.prix;
     reference.commentaire=reference.commentaire+" URL "+newItem.url;
-    console.log("!!!!différence de prix");
+
+    console.log("!!!!différence de prix=>update commentaire");
     console.log(reference.url);
     console.log(newItem.url);
   }
   else{
     console.log("meme prix"+newItem.prix);
+     console.log(reference.url);
+    console.log(newItem.url);
   }
   if(newItem.ges)
     reference.ges=newItem.ges;
@@ -79,6 +154,10 @@ var updateReference = function(reference,newItem) {
     reference.nrj=newItem.nrj;
   if(newItem.cp)
     reference.cp=newItem.cp;
+  if(newItem.codeInsee)
+    reference.codeInsee=newItem.codeInsee;
+  
+
   reference.dateMaj=newItem.dateMaj;
 }
 
@@ -88,7 +167,7 @@ var processFile = function(file, needle) {
   //console.log(obj.test);
   liste=obj.test;
   for(i=0;i<liste.length;i++){
-    console.log(liste[i].url);
+    //console.log(liste[i].url);
     liste[i].url="toto";
   }
 
@@ -103,7 +182,7 @@ reference=getObjectList(process.argv[3]);
 liste=getObjectList(process.argv[2]);
 for(var i=0;i<liste.length;i++){
   firstElem=liste[i];
-  console.log("process:"+firstElem.url)
+  //console.log("process:"+firstElem.url)
   firstDoublon=finddoublons(firstElem,reference);
   if(firstDoublon){
     firstDoublon["conso"]=firstElem.conso;
@@ -112,12 +191,13 @@ for(var i=0;i<liste.length;i++){
   }
   else{
     toAddList.push(firstElem);
-    reference.push(firstElem);
+    //reference.push(firstElem);
   }
 
 }
 
-writeFile(reference,"new_ref.json");
+newRef={"test":reference}
+writeFile(newRef,"new_ref.json");
 writeFile(toAddList,"new_annonces.json");
 
 console.log("nouvelles annonces:"+toAddList.length);
