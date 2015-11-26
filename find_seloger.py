@@ -60,6 +60,21 @@ for neighbor in root.iter('annonce'):
 		print '\"surface\":\"'+neighbor.find('surface').text+"\","
 		print '\"dateMaj\":\"'+datemaj+"\","
 		
+		bilanConsoEnergie=neighbor.find('bilanConsoEnergie')
+		consoEnergie=neighbor.find('consoEnergie')
+		emissionGES=neighbor.find('emissionGES')
+		bilanEmissionGES=neighbor.find('bilanEmissionGES')
+		
+		if(bilanConsoEnergie is not None):
+			print '\"nrj\":\"'+bilanConsoEnergie.text.lower()+"\","
+		if(consoEnergie is not None):
+			print '\"consonrj\":\"'+consoEnergie.text+"\","
+		if(emissionGES is not None):
+			print '\"consoges\":\"'+emissionGES.text+"\","
+		if(bilanEmissionGES is not None):
+			print '\"ges\":\"'+bilanEmissionGES.text.lower()+"\","
+
+
 		if(len(neighbor.find('anneeconstruct'))>0):
 			print '\"anneeconstruct\":\"'+neighbor.find('anneeconstruct').text+"\","
 

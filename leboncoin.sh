@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-downloadseloger=true
+downloadseloger=false
 url="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=1&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
 url2="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=2&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
 url3="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=3&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
@@ -50,56 +50,61 @@ url3="http://www.leboncoin.fr/ventes_immobilieres/offres/midi_pyrenees/?f=a&th=1
 
 arrayurl=( $url1 $url2 $url3 )
 
-download=true
+download=false
+
+counterUrl=0
 
 
 for url in "${arrayurl[@]}"
 do
 	echo $url
+	counterUrl=$((counterUrl+1))
 
+	outdir="temp/lbc_$counterUrl"
+	mkdir $outdir
 
 	if [ $download = true ]
 		then
-		curl $url > temp/firstPage.html
+		curl $url > $outdir/firstPage.html
 	fi
 
+	
 
 
 
+	gawk 'match($0, /(http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/offres.*o=[0-9]*.*)"/, a) {print a[1]}'  $outdir/firstPage.html > $outdir/offres.list
 
-	gawk 'match($0, /(http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/offres.*o=[0-9]*.*)"/, a) {print a[1]}'  temp/firstPage.html > offres.list
+	echo $url >> $outdir/offres.list
+	sort -u $outdir/offres.list > $outdir/offres3.list
 
-	echo $url >> offres.list
-	sort -u offres.list > offres3.list
-
-	sed "s/\&amp;/\&/g"  offres3.list >  offres2.list
+	sed "s/\&amp;/\&/g"  $outdir/offres3.list >  $outdir/offres2.list
 
 	counter=0
-	cat offres2.list | while read line
+	cat $outdir/offres2.list | while read line
 	do
 		counter=$((counter+1))
 
 		counteroffre=0
-		echo "curl $line > temp/res_$counter.txt"
+		echo "curl $line > $outdir/res_$counter.txt"
 		if [ $download = true ]
 			then
-			curl $line > temp/res_$counter.txt
+			curl $line > $outdir/res_$counter.txt
 		fi
 		#href="http://www.leboncoin.fr/ventes_immobilieres/882729568.htm?ca=16_s" title="Grange sur 2 niveaux"
-		gawk 'match($0, /http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/[0-9]*.htm.*ca=16_s/, a) {print a[0]}'  temp/res_$counter.txt > temp/res_$counter.list
-		mkdir temp/res_$counter
-		cat temp/res_$counter.list | while read lineoffre
+		gawk 'match($0, /http:\/\/www\.leboncoin.fr\/ventes_immobilieres\/[0-9]*.htm.*ca=16_s/, a) {print a[0]}'  $outdir/res_$counter.txt > $outdir/res_$counter.list
+		mkdir $outdir/res_$counter
+		cat $outdir/res_$counter.list | while read lineoffre
 		do
 			counteroffre=$((counteroffre+1))
 			if [ $download = true ]
 				then
-				curl $lineoffre > temp/res_$counter/res_$counteroffre.html
+				curl $lineoffre > $outdir/res_$counter/res_$counteroffre.html
 			fi
 			#echo "<tr>">>$output
 			#echo "<td><a href='$lineoffre'>$lineoffre</a></td>" >>$output
 			#echo "{">>$output
 			#echo "\"url\":\"$lineoffre\"," >>$output
-			python find.py temp/res_$counter/res_$counteroffre.html "$startDate" $lineoffre>>$output
+			python find.py $outdir/res_$counter/res_$counteroffre.html "$startDate" $lineoffre>>$output
 			#echo ",">>$output
 			#echo "</tr>">>$output
 			#echo "},">>$output
