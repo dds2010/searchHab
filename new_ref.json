@@ -1,4 +1,5 @@
-var data= [
+{
+  "test": [
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/882676939.htm?ca=16_s",
       "image": "<img src=\"http://img1.leboncoin.fr/images/e98/e986d568b4c590718fb38cf3f96e31ec9e315cc2.jpg\" alt=\"\">",
@@ -44,7 +45,8 @@ var data= [
       "offres": "pro",
       "images": "<img src=\"http://img0.leboncoin.fr/thumbs/bd2/bd227a89e61052c03a1a96b7f30841e4accf1648.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/4c1/4c1ac641b761cc987b0d434e02c7df615a2df3ff.jpg\" alt=\"\">                                                  <img src=\"http://img7.leboncoin.fr/thumbs/b4e/b4e784286c6f8b822e07b1f9679966f5f21df007.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/5a9/5a90cec80f37665c3044b43bac425645702afb5a.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/904/9049fdce31fcfa035ec3feb9c309c1508649ec36.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/f46/f464d15c43aa3bc3813c8e1ce0ddf292178c33c9.jpg\" alt=\"\">",
       "commentaire": "bof bof",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/882549835.htm?ca=16_s",
@@ -187,7 +189,7 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img3.leboncoin.fr/thumbs/9cc/9cc3e8266db08587b90cca601a45ee8e9a7b23ef.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/484/4843f7caa80be3a9daea8b86efa8c89b7c2cc74c.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/7e6/7e640ab614b76b859c9336e5fc70660acd82fbc1.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/e5f/e5f8b09b21646aad5064d04fdc4f293767063f50.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/228/228ef795536f6649da13e87457b29688298bef61.jpg\" alt=\"\">                                                  <img src=\"http://img7.leboncoin.fr/thumbs/4ff/4ff10adbee492d8bbf1cdeb89cfb338031f4efed.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/bfc/bfc9791ae2a6569fd1f098773ebe86c8a1554996.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/d90/d909235d75bdc39cd85e821e9443bed3f8b7d405.jpg\" alt=\"\">                                                  <img src=\"http://img7.leboncoin.fr/thumbs/448/4482816496d426aaa5399d7e61ab2a0f07093322.jpg\" alt=\"\">",
-      "commentaire": "chouette!! A visiter prix  le le 12 novembre &agrave; 15:26. = 310000 prix  le le 26 novembre &agrave; 15:26. = 298000 URL http://www.leboncoin.fr/ventes_immobilieres/777201590.htm?ca=16_s",
+      "commentaire": "chouette!! A visiter prix  le le 12 novembre &agrave; 15:26. = 310000 prix  le le 26 novembre &agrave; 15:26. = 298000 URL http://www.leboncoin.fr/ventes_immobilieres/777201590.htm?ca=16_s prix  le le 26 novembre &agrave; 15:26. = 310000 prix  le le 26 novembre &agrave; 15:26. = 298000 URL http://www.leboncoin.fr/ventes_immobilieres/777201590.htm?ca=16_s",
       "priorite": "1",
       "otherlinks": [],
       "ges": "c",
@@ -208,6 +210,7 @@ var data= [
       "commentaire": "doublon",
       "priorite": "0",
       "otherlinks": [
+        "http://www.leboncoin.fr/ventes_immobilieres/887208061.htm?ca=16_s",
         "http://www.leboncoin.fr/ventes_immobilieres/887208061.htm?ca=16_s"
       ],
       "ges": "b",
@@ -472,6 +475,7 @@ var data= [
       "ges": "b",
       "nrj": "c",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103056749.htm?p=CCCPo9LAAp_gd0bw",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103056749.htm?p=CCCPo9LAAp_gd0bw"
       ]
     },
@@ -492,6 +496,7 @@ var data= [
       "ges": "b",
       "nrj": "e",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103027457.htm?p=CCCPo9LAAlmQd0bw",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103027457.htm?p=CCCPo9LAAlmQd0bw"
       ]
     },
@@ -796,7 +801,8 @@ var data= [
       "pieces": "4",
       "offres": "pro",
       "images": "<img src=\"http://img5.leboncoin.fr/thumbs/a52/a52bb30aad35d9f34fb5accb3e392c5878b4f0b1.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/ecf/ecfe00785e083d8ef272887a4db7278fe0d109f7.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/390/3905a4638005c24c6cf539f5bd68b2c01dcce14d.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/877541160.htm?ca=16_s",
@@ -948,7 +954,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img7.leboncoin.fr/thumbs/269/26933756af6dc54d931451797cc7e97b6539997b.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/646/646185bfa48186f1793bde20b65510645ce2dff9.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/34b/34b2f8b428894126038da71adeef78eb8c4aeb5b.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/099/0991547cacf23caa405e5b245296bf4477c68acd.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/853103408.htm?ca=16_s",
@@ -1023,7 +1030,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img0.leboncoin.fr/thumbs/7e2/7e23194477b6253f14ec0fb1ea3a2097bc1adffa.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/8dd/8ddec06e5178e723b74da08d3e3c7d73df610e6c.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/ed8/ed8a168f74b68b79b6105b384c48b6bf56beb86e.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/873794143.htm?ca=16_s",
@@ -1156,7 +1164,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img5.leboncoin.fr/thumbs/8c7/8c7be86b5fe8750de1e26df31bb56d903fef8e8f.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/96b/96b88f89b01f943e43617646003153857a435945.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/bbb/bbb52190edffc8efed444886dcec4d6fab1b5861.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/4f8/4f864fd3a0d98af8d8375bd7789f569ba9587e96.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/f06/f06f587d5941c7fc7501dd5355976a848b84111c.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/a79/a79d62b4b762de1ebbca4a578118f319c5a44afc.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/84b/84b0b588928c2f0eebe51ff4779779825ba2385f.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/d31/d31fe3ab9978f649210406539407f00b02e859ee.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/02b/02bf546e04e5e64b60431a945ef3653a4c2a4579.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/868916981.htm?ca=16_s",
@@ -1294,7 +1303,8 @@ var data= [
       "offres": "pro",
       "images": "<img src=\"http://img5.leboncoin.fr/thumbs/a01/a01177f735187ac3f4006ad6f62773b3a96064f9.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/412/412df19d68b41b707a1c22122ee5402f3bb5c7d6.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/e23/e23e702971f82c1ffc5a8d548e1d2aa2e55608a1.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/1ef/1ef2d375f9d54887e9c977f8cb5f9e011f782a6e.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/96c/96c5bc7aff4d6a58fd6d1eaa5006f8af35927b25.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/095/095a9fc098fc267cebf341a8b8f0e36fe05b061d.jpg\" alt=\"\">",
       "commentaire": "doublon le moins cher",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/867143840.htm?ca=16_s",
@@ -1322,11 +1332,12 @@ var data= [
       "pieces": "4",
       "offres": "pro",
       "images": "<img src=\"http://img3.leboncoin.fr/thumbs/30b/30bb5b8e5eb98006905258e9dacc28e70f8761c0.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/07d/07d687c846d0ced149006d5c689cd4db94642754.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/ae2/ae2923607b36ad8a94a955ec4b87b2ea21b94bb1.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/c85/c853d66c863daa7af34484da20f539d3adcd1289.jpg\" alt=\"\">",
-      "commentaire": " prix  le le 12 octobre &agrave; 08:09. = 299000 prix  le le 22 novembre &agrave; 15:05. = 289000 URL http://www.leboncoin.fr/ventes_immobilieres/867296131.htm?ca=16_s prix  le 2015-11-26T08:28:00 = 299000 prix  le le 22 novembre &agrave; 15:05. = 289000 URL http://www.leboncoin.fr/ventes_immobilieres/867296131.htm?ca=16_s",
+      "commentaire": " prix  le le 12 octobre &agrave; 08:09. = 299000 prix  le le 22 novembre &agrave; 15:05. = 289000 URL http://www.leboncoin.fr/ventes_immobilieres/867296131.htm?ca=16_s prix  le 2015-11-26T08:28:00 = 299000 prix  le le 22 novembre &agrave; 15:05. = 289000 URL http://www.leboncoin.fr/ventes_immobilieres/867296131.htm?ca=16_s prix  le 2015-11-26T08:28:00 = 299000 prix  le le 22 novembre &agrave; 15:05. = 289000 URL http://www.leboncoin.fr/ventes_immobilieres/867296131.htm?ca=16_s",
       "priorite": "0",
       "ges": "b",
       "nrj": "d",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103025471.htm?p=CCCPo9LAAjR0d0bw",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/103025471.htm?p=CCCPo9LAAjR0d0bw"
       ]
     },
@@ -1341,7 +1352,8 @@ var data= [
       "surface": "103",
       "pieces": "5",
       "offres": "pro",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/838178089.htm?ca=16_s",
@@ -1508,7 +1520,8 @@ var data= [
       "offres": "pro",
       "images": "<img src=\"http://img2.leboncoin.fr/thumbs/2cf/2cf4ecc0402776dc17d9bb0fd95582a922cecc9a.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/be1/be11fa29f4d62af33250ccf9869e58a7cf315114.jpg\" alt=\"\">                                                  <img src=\"http://img7.leboncoin.fr/thumbs/654/654a996ff469668bdf06de2d516c996fc37108b5.jpg\" alt=\"\">",
       "commentaire": "doublon moins cher.",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/763419460.htm?ca=16_s",
@@ -1748,7 +1761,9 @@ var data= [
       "pieces": "5",
       "offres": "part",
       "images": "<img src=\"http://img4.leboncoin.fr/thumbs/f65/f6597d444f61e48d08f8249003caedc2d1c7b720.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/b22/b2293cb00db884f6bdc092df32166242d3193869.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "1",
+      "commentaire": "prix le moins cher"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/868233487.htm?ca=16_s",
@@ -1762,7 +1777,8 @@ var data= [
       "pieces": "4",
       "offres": "pro",
       "commentaire": "pas de photos, est-ce un projet de construction?",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/867334009.htm?ca=16_s",
@@ -1792,7 +1808,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img6.leboncoin.fr/thumbs/c54/c547e11ed7a8f721763f527ed4efe2969a66ec33.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/9c1/9c123463790e3830f24452fb9473141149ee0af2.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/bf3/bf30b8b37f7ebddd5963c8503adce9ef8bc680f8.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/380/3805757402e5eb6c1f7de25b8bb0431c079abf6c.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/844213690.htm?ca=16_s",
@@ -1822,7 +1839,8 @@ var data= [
       "pieces": "6",
       "offres": "pro",
       "images": "<img src=\"http://img7.leboncoin.fr/thumbs/e52/e52ce30ea8bda47fa737b3193171384c86af9521.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/6df/6df47c6b0085ef48e031ef66700766a373fd6c52.jpg\" alt=\"\">                                                  <img src=\"http://img7.leboncoin.fr/thumbs/d78/d78f61f3662dbe3aa5d73bc761544505d64dc33a.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/5c9/5c9184f91e1639631719c42d2676967c1d13d9bc.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/d26/d26d0c3030a00d056eec3511f4fc10181d40cbf9.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/3af/3af3ed11e06fa25db823bd646cbcede6c0a358f2.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/64d/64da1b4fa19d3fffa5904d934356ed340ecbff20.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/599/5990d5a1cd40518becb062e2b94410903f0b0d9e.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/964/964eb970c9ad8758991f310cafb0bf3186ebb334.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/726343258.htm?ca=16_s",
@@ -1899,7 +1917,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img6.leboncoin.fr/thumbs/1c7/1c7bcf71b9864526980f0ed5fee4a9691f5ad1d7.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/123/123325f050a2156aa4ef92511de71b5479daf8b0.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/724/72428d723115e3b46fdeca0e13ccd05471e9f07a.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/878859940.htm?ca=16_s",
@@ -2035,7 +2054,8 @@ var data= [
       "pieces": "5",
       "offres": "pro",
       "images": "<img src=\"http://img4.leboncoin.fr/thumbs/a84/a84d54db0ed27d735494b0c1b2f7e7f596ca3a57.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/29a/29a893febe3006289c0c1399efd141fd155d079b.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/27d/27def6f90e95e8cb02fce1407cd41ace09b631a2.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/7c3/7c38c467e0e71bfa5fb2cdb6e574f29aa779c411.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/787841981.htm?ca=16_s",
@@ -2065,7 +2085,8 @@ var data= [
       "pieces": "6",
       "offres": "pro",
       "images": "<img src=\"http://img7.leboncoin.fr/thumbs/8c4/8c460f64f9973f78ee9b324f3524d87c93b266e7.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/503/503897d5cc1656bf9a2cf3a5e3fa0ba53a37061a.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/c75/c752a92f1341e765c4def6e0ea56740a79d66880.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/53f/53fef3a88d8b1780dac76cbad5f185219fd67d26.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/763419390.htm?ca=16_s",
@@ -2109,7 +2130,8 @@ var data= [
       "pieces": "4",
       "offres": "pro",
       "images": "<img src=\"http://img5.leboncoin.fr/thumbs/caf/caf94b0b2c109876844f850e6e2368ab3b48c3e2.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/aa6/aa6e1ce116e8924e6f492e86e3674e4ca439577f.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/853/853bfeef04471a893f7579183c07a0c890d730e8.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/48b/48bd3b831ac987756fb3d3eba8db4b5791abeecf.jpg\" alt=\"\">                                                  <img src=\"http://img2.leboncoin.fr/thumbs/ea3/ea3cdfb50d38956d1af05339a114d8de22df2a2b.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/2e9/2e99cf6b77cce4504c692807fdde3cf512ea3db1.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/867159040.htm?ca=16_s",
@@ -2139,7 +2161,8 @@ var data= [
       "pieces": "7",
       "offres": "pro",
       "images": "<img src=\"http://img3.leboncoin.fr/thumbs/3fd/3fdde0e15845ec115862952873ccfae20b4b54ed.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/a7c/a7c426c9984f01b492d7b34559fcd0190c0d5e4f.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/2fc/2fc309d4e941e628427dd28db226705d28d0f503.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/02c/02c0738e094e17eb8f921bf58570f99a90dfb71b.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/825234631.htm?ca=16_s",
@@ -2168,7 +2191,8 @@ var data= [
       "pieces": "7",
       "offres": "pro",
       "images": "<img src=\"http://img0.leboncoin.fr/thumbs/883/883343ca561fe6d802f6608e0348cd3230f2b176.jpg\" alt=\"\">                                                  <img src=\"http://img6.leboncoin.fr/thumbs/13d/13ddd823019baf6d010807d39ea92aec63906f4b.jpg\" alt=\"\">                                                  <img src=\"http://img4.leboncoin.fr/thumbs/4ee/4eece56bae46a441ab2d3b02ba4635ad4aa775ce.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/84d/84dba24ee7faba85247d6a53b938639611361206.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/861071038.htm?ca=16_s",
@@ -2182,7 +2206,8 @@ var data= [
       "pieces": "4",
       "offres": "pro",
       "images": "<img src=\"http://img7.leboncoin.fr/thumbs/906/906b7774f24ae83f7ef51f37512771657afa7d4a.jpg\" alt=\"\">                                                  <img src=\"http://img1.leboncoin.fr/thumbs/d9c/d9ced6d3a1b5ce868626181a4e13295aa16d09bf.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/6a5/6a52798346acfafa644fcc6fd2502070c04fdd0a.jpg\" alt=\"\">                                                  <img src=\"http://img5.leboncoin.fr/thumbs/f09/f0933e3e16ca33115f1a5a9fcceb6cdc015fc760.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/859394451.htm?ca=16_s",
@@ -2237,6 +2262,8 @@ var data= [
       "cp": "31320",
       "otherlinks": [
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/88792825.htm?p=CCCPo9LAApgQXzmQ",
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/100217419.htm?p=CCCPo9LAApgQMJMg",
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/88792825.htm?p=CCCPo9LAApgQXzmQ",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/100217419.htm?p=CCCPo9LAApgQMJMg"
       ],
       "ges": "c",
@@ -2280,8 +2307,10 @@ var data= [
       "images": "http://9.visuels.poliris.com/2d/9/d/d/c/9ddcbbd6-53ce.jpg,",
       "cp": "31750",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/escalquens-31/104106959.htm?p=CCCPo-AwAifCef4w",
         "http://www.seloger.com/annonces/achat/maison/escalquens-31/104106959.htm?p=CCCPo-AwAifCef4w"
-      ]
+      ],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -2299,7 +2328,7 @@ var data= [
       "anneeconstruct": "1975",
       "images": "http://5.visuels.poliris.com/2d/5/9/2/2/59229e27-5acf.jpg,http://7.visuels.poliris.com/2d/7/7/0/f/770fd988-5c86.jpg,",
       "commentaire": "",
-      "priorite": "3",
+      "priorite": "0",
       "cp": "31520",
       "otherlinks": [],
       "ges": "c",
@@ -2325,7 +2354,9 @@ var data= [
       "otherlinks": [],
       "ges": "c",
       "nrj": "e",
-      "codeInsee": "310161"
+      "codeInsee": "310161",
+      "priorite": "0",
+      "commentaire": ""
     },
     {
       "source": "seloger",
@@ -2346,6 +2377,7 @@ var data= [
       "priorite": "0",
       "cp": "31450",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/deyme-31/104134851.htm?p=CCCPo9bQAay2b5Fw",
         "http://www.seloger.com/annonces/achat/maison/deyme-31/104134851.htm?p=CCCPo9bQAay2b5Fw"
       ]
     },
@@ -2414,6 +2446,7 @@ var data= [
       "priorite": "0",
       "cp": "31750",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/escalquens-31/103979243.htm?p=CCCPo-AwAii8J_oQ",
         "http://www.seloger.com/annonces/achat/maison/escalquens-31/103979243.htm?p=CCCPo-AwAii8J_oQ"
       ]
     },
@@ -2436,7 +2469,8 @@ var data= [
       "otherlinks": [],
       "ges": "b",
       "nrj": "a",
-      "codeInsee": "310169"
+      "codeInsee": "310169",
+      "priorite": ""
     },
     {
       "source": "seloger",
@@ -2608,7 +2642,8 @@ var data= [
       "dateMaj": "2015-09-17T16:55:00",
       "anneeconstruct": "",
       "images": "http://1.visuels.poliris.com/2d/1/d/a/1/1da1a479-4cac.jpg,http://e.visuels.poliris.com/2d/e/9/d/f/e9df52e3-32ea.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -2704,7 +2739,8 @@ var data= [
       "dateMaj": "2015-06-03T16:25:00",
       "anneeconstruct": "1800",
       "images": "http://5.visuels.poliris.com/2d/5/c/f/e/5cfee623-5830.jpg,http://0.visuels.poliris.com/2d/0/7/e/4/07e4d77b-5b3f.jpg,http://9.visuels.poliris.com/2d/9/0/b/d/90bd0d5a-5108.jpg,http://3.visuels.poliris.com/2d/3/2/b/f/32bf1a3e-5c34.jpg,http://5.visuels.poliris.com/2d/5/2/f/f/52ffd62f-456d.jpg,http://2.visuels.poliris.com/2d/2/1/8/9/218903a9-4084.jpg,http://7.visuels.poliris.com/2d/7/9/7/0/7970d37f-5170.jpg,http://f.visuels.poliris.com/2d/f/e/c/0/fec081a0-4cbb.jpg,http://d.visuels.poliris.com/2d/d/c/3/d/dc3de634-4c1e.jpg,http://e.visuels.poliris.com/2d/e/7/d/1/e7d142ff-3f97.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -2820,6 +2856,7 @@ var data= [
       "commentaire": "doublon",
       "cp": "31320",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/102392621.htm?p=CCCPo9LAAiLgKkbg",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/102392621.htm?p=CCCPo9LAAiLgKkbg"
       ],
       "ges": "c",
@@ -2881,7 +2918,8 @@ var data= [
       "dateMaj": "2015-11-10T18:11:00",
       "anneeconstruct": "",
       "images": "http://9.visuels.poliris.com/2d/9/d/d/c/9ddcbbd6-53ce.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -2965,7 +3003,8 @@ var data= [
       "otherlinks": [],
       "ges": "d",
       "nrj": "c",
-      "codeInsee": "310169"
+      "codeInsee": "310169",
+      "commentaire": "bof"
     },
     {
       "source": "seloger",
@@ -2982,7 +3021,8 @@ var data= [
       "dateMaj": "2015-11-05T07:30:00",
       "anneeconstruct": "",
       "images": "http://5.visuels.poliris.com/2d/5/a/c/0/5ac06de0-8ae6.jpg,http://7.visuels.poliris.com/2d/7/3/8/1/7381d05a-80d3.jpg,http://6.visuels.poliris.com/2d/6/c/b/6/6cb63fa2-5247.jpg,http://1.visuels.poliris.com/2d/1/2/6/5/1265a99b-87a7.jpg,http://2.visuels.poliris.com/2d/2/b/9/f/2b9f08b3-8481.jpg,http://a.visuels.poliris.com/2d/a/a/5/9/aa59ecd9-4593.jpg,http://1.visuels.poliris.com/2d/1/a/f/7/1af78311-6b63.jpg,http://8.visuels.poliris.com/2d/8/a/c/c/8acc59f0-3d06.jpg,http://7.visuels.poliris.com/2d/7/2/d/1/72d17aca-4c05.jpg,http://4.visuels.poliris.com/2d/4/e/a/2/4ea29613-45c9.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "1"
     },
     {
       "source": "seloger",
@@ -3041,7 +3081,8 @@ var data= [
       "dateMaj": "2015-09-24T11:02:00",
       "anneeconstruct": "",
       "images": "http://8.visuels.poliris.com/2d/8/c/f/0/8cf0c4c5-4f4e.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -3081,7 +3122,8 @@ var data= [
       "dateMaj": "2015-05-01T06:34:00",
       "anneeconstruct": "1980",
       "images": "http://e.visuels.poliris.com/2d/e/a/e/0/eae06f3b-5e1f.jpg,http://a.visuels.poliris.com/2d/a/c/e/3/ace3b0cd-8212.jpg,http://0.visuels.poliris.com/2d/0/2/e/d/02ed21ec-7508.jpg,http://a.visuels.poliris.com/2d/a/a/6/2/aa624082-5dd3.jpg,http://c.visuels.poliris.com/2d/c/1/1/7/c117c40a-5cb2.jpg,http://8.visuels.poliris.com/2d/8/e/a/5/8ea52cd5-50aa.jpg,",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -3159,7 +3201,8 @@ var data= [
       "images": "http://0.visuels.poliris.com/2d/0/a/5/9/0a5901b7-5963.jpg,http://8.visuels.poliris.com/2d/8/b/d/d/8bdd81de-5be6.jpg,http://6.visuels.poliris.com/2d/6/a/b/e/6abe8044-4920.jpg,http://7.visuels.poliris.com/2d/7/e/b/c/7ebc6005-48ea.jpg,http://c.visuels.poliris.com/2d/c/9/5/3/c953919b-2e17.jpg,http://a.visuels.poliris.com/2d/a/9/0/8/a9086972-26b4.jpg,http://3.visuels.poliris.com/2d/3/f/b/d/3fbdb686-3d2b.jpg,http://5.visuels.poliris.com/2d/5/b/9/d/5b9d42d5-3c7e.jpg,http://0.visuels.poliris.com/2d/0/c/d/8/0cd8d387-414b.jpg,http://c.visuels.poliris.com/2d/c/e/3/c/ce3c8196-46e0.jpg,http://8.visuels.poliris.com/2d/8/0/d/2/80d2bdf1-5d8c.jpg,http://9.visuels.poliris.com/2d/9/a/8/7/9a87f8df-3dfb.jpg,http://b.visuels.poliris.com/2d/b/2/d/5/b2d538be-6504.jpg,http://3.visuels.poliris.com/2d/3/e/3/1/3e315760-3194.jpg,http://9.visuels.poliris.com/2d/9/1/c/c/91cc2f7d-295d.jpg,http://3.visuels.poliris.com/2d/3/c/9/a/3c9a8340-42f9.jpg,http://b.visuels.poliris.com/2d/b/6/0/3/b603cddf-325e.jpg,http://d.visuels.poliris.com/2d/d/1/6/f/d16fbf91-3eeb.jpg,",
       "cp": "31750",
       "otherlinks": [],
-      "codeInsee": "310169"
+      "codeInsee": "310169",
+      "priorite": ""
     },
     {
       "source": "seloger",
@@ -3731,11 +3774,13 @@ var data= [
       "nbChambre": "4",
       "cp": "31450",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/ayguesvives-31/103025433.htm?p=CCCPo9bQAbd0d0bw",
         "http://www.seloger.com/annonces/achat/maison/ayguesvives-31/103025433.htm?p=CCCPo9bQAbd0d0bw"
       ],
       "ges": "a",
       "nrj": "a",
-      "codeInsee": "310004"
+      "codeInsee": "310004",
+      "priorite": ""
     },
     {
       "anneeconstruct": "1986",
@@ -3822,7 +3867,8 @@ var data= [
       "titre": "Maison traditionnelle",
       "nbChambre": "4",
       "cp": "31520",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "anneeconstruct": "",
@@ -3844,7 +3890,8 @@ var data= [
       "otherlinks": [],
       "ges": "b",
       "nrj": "a",
-      "codeInsee": "310162"
+      "codeInsee": "310162",
+      "priorite": "0"
     },
     {
       "anneeconstruct": "",
@@ -3866,7 +3913,8 @@ var data= [
       "otherlinks": [],
       "ges": "b",
       "nrj": "a",
-      "codeInsee": "310162"
+      "codeInsee": "310162",
+      "priorite": "0"
     },
     {
       "anneeconstruct": "1985",
@@ -3906,7 +3954,8 @@ var data= [
       "nbChambre": "3",
       "cp": "31450",
       "otherlinks": [],
-      "codeInsee": "310162"
+      "codeInsee": "310162",
+      "priorite": "0"
     },
     {
       "anneeconstruct": "1985",
@@ -3950,7 +3999,8 @@ var data= [
       "otherlinks": [],
       "ges": "c",
       "nrj": "d",
-      "codeInsee": "310048"
+      "codeInsee": "310048",
+      "priorite": ""
     },
     {
       "anneeconstruct": "",
@@ -4035,7 +4085,8 @@ var data= [
       "nbChambre": "2",
       "cp": "31670",
       "otherlinks": [],
-      "codeInsee": "310254"
+      "codeInsee": "310254",
+      "priorite": "0"
     },
     {
       "anneeconstruct": "2014",
@@ -4055,7 +4106,8 @@ var data= [
       "nbChambre": "3",
       "cp": "31750",
       "otherlinks": [],
-      "codeInsee": "310169"
+      "codeInsee": "310169",
+      "priorite": "0"
     },
     {
       "anneeconstruct": "",
@@ -4167,7 +4219,8 @@ var data= [
       "otherlinks": [],
       "ges": "c",
       "nrj": "d",
-      "codeInsee": "310429"
+      "codeInsee": "310429",
+      "commentaire": "a des doublons "
     },
     {
       "anneeconstruct": "",
@@ -4244,8 +4297,11 @@ var data= [
       "nrj": "c",
       "otherlinks": [
         "http://www.seloger.com/annonces/achat/maison/escalquens-31/104100267.htm?p=CCCPo-AwAg9YJ_oQ",
+        "http://www.seloger.com/annonces/achat/maison/escalquens-31/104013111.htm?p=CCCPo-AwAhU0d0bw",
+        "http://www.seloger.com/annonces/achat/maison/escalquens-31/104100267.htm?p=CCCPo-AwAg9YJ_oQ",
         "http://www.seloger.com/annonces/achat/maison/escalquens-31/104013111.htm?p=CCCPo-AwAhU0d0bw"
-      ]
+      ],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4295,7 +4351,8 @@ var data= [
       "images": "http://b.visuels.poliris.com/2d/b/7/8/6/b786bd8a-41ae.jpg,http://5.visuels.poliris.com/2d/5/c/f/1/5cf1b8a9-3e7c.jpg,http://e.visuels.poliris.com/2d/e/8/9/6/e896ee23-44f2.jpg,http://1.visuels.poliris.com/2d/1/4/8/d/148d864c-4ecb.jpg,http://0.visuels.poliris.com/2d/0/2/8/d/028dd5cf-363d.jpg,http://6.visuels.poliris.com/2d/6/1/2/d/612dbff9-40bd.jpg,http://3.visuels.poliris.com/2d/3/a/d/e/3ade78cf-8c83.jpg,http://7.visuels.poliris.com/2d/7/6/a/c/76ac57c7-9935.jpg,http://1.visuels.poliris.com/2d/1/b/b/a/1bba4f9b-3d27.jpg,http://6.visuels.poliris.com/2d/6/9/1/2/691206a2-5f2c.jpg",
       "otherlinks": [],
       "ges": "d",
-      "nrj": "c"
+      "nrj": "c",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4367,7 +4424,8 @@ var data= [
       "dateCrea": "2015-11-21T13:29:00",
       "images": "http://e.visuels.poliris.com/2d/e/9/9/e/e99ee1a5-9a83.jpg,http://2.visuels.poliris.com/2d/2/8/1/3/281372d3-3e3e.jpg,http://0.visuels.poliris.com/2d/0/0/8/7/00879632-3152.jpg,http://9.visuels.poliris.com/2d/9/d/6/8/9d68d6ee-60df.jpg",
       "otherlinks": [],
-      "nrj": "d"
+      "nrj": "d",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4392,6 +4450,7 @@ var data= [
       "images": "http://0.visuels.poliris.com/2d/0/a/2/d/0a2d02fb-4d06.jpg,http://a.visuels.poliris.com/2d/a/6/a/9/a6a9c36c-4960.jpg,http://6.visuels.poliris.com/2d/6/f/d/b/6fdb23ad-47ee.jpg,http://c.visuels.poliris.com/2d/c/0/8/6/c086eb00-5c09.jpg,http://3.visuels.poliris.com/2d/3/2/d/1/32d1460e-3e51.jpg,http://1.visuels.poliris.com/2d/1/8/5/b/185b31c2-390b.jpg,http://d.visuels.poliris.com/2d/d/0/2/e/d02eef6b-3b5c.jpg,http://0.visuels.poliris.com/2d/0/f/4/6/0f46b12d-54be.jpg,http://d.visuels.poliris.com/2d/d/a/f/f/daffd21f-6693.jpg",
       "priorite": "0",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/97795187.htm?p=CCCPo9LAAjR0XzmQ",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/97795187.htm?p=CCCPo9LAAjR0XzmQ"
       ],
       "ges": "b",
@@ -4443,7 +4502,8 @@ var data= [
       "dateMaj": "2015-11-25T14:26:00",
       "dateCrea": "2015-11-19T14:22:00",
       "images": "http://3.visuels.poliris.com/2d/3/a/d/6/3ad63599-5b38.jpg,http://e.visuels.poliris.com/2d/e/9/9/2/e992552f-5f7c.jpg,http://2.visuels.poliris.com/2d/2/7/6/9/27697d2d-5992.jpg,http://c.visuels.poliris.com/2d/c/b/d/3/cbd335ab-4a5d.jpg,http://8.visuels.poliris.com/2d/8/c/8/6/8c8600ce-48e9.jpg,http://3.visuels.poliris.com/2d/3/6/e/a/36ea38d9-3646.jpg,http://f.visuels.poliris.com/2d/f/1/e/c/f1ec1cb6-2fb1.jpg,http://c.visuels.poliris.com/2d/c/8/2/b/c82b4691-3684.jpg,http://8.visuels.poliris.com/2d/8/3/1/6/8316b211-42cd.jpg,http://e.visuels.poliris.com/2d/e/a/7/d/ea7dd4fd-9667.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": ""
     },
     {
       "source": "seloger",
@@ -4467,10 +4527,12 @@ var data= [
       "dateCrea": "2015-11-17T16:42:00",
       "images": "http://1.visuels.poliris.com/2d/1/9/2/2/192224bd-4b79.jpg,http://e.visuels.poliris.com/2d/e/b/7/f/eb7f564c-430e.jpg,http://7.visuels.poliris.com/2d/7/8/c/7/78c7f57c-3ca4.jpg,http://9.visuels.poliris.com/2d/9/1/4/4/91447a00-3f7e.jpg,http://2.visuels.poliris.com/2d/2/7/e/3/27e3c022-4a51.jpg,http://f.visuels.poliris.com/2d/f/5/9/e/f59e6ac8-649e.jpg,http://d.visuels.poliris.com/2d/d/0/9/a/d09a3006-79de.jpg,http://3.visuels.poliris.com/2d/3/d/e/6/3de69981-909c.jpg,http://d.visuels.poliris.com/2d/d/0/9/1/d0913be1-3a42.jpg",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/escalquens-31/102111061.htm?p=CCCPo-AwAiqwBojA",
         "http://www.seloger.com/annonces/achat/maison/escalquens-31/102111061.htm?p=CCCPo-AwAiqwBojA"
       ],
       "ges": "d",
-      "nrj": "c"
+      "nrj": "c",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4493,7 +4555,8 @@ var data= [
       "dateMaj": "2015-11-25T01:48:00",
       "dateCrea": "2015-11-17T00:19:00",
       "images": "http://7.visuels.poliris.com/2d/7/8/1/8/7818ec5b-6fb5.jpg,http://8.visuels.poliris.com/2d/8/5/0/7/8507ab79-411d.jpg,http://4.visuels.poliris.com/2d/4/d/0/7/4d07bd3e-38f3.jpg,http://2.visuels.poliris.com/2d/2/9/6/8/29684796-37e1.jpg,http://5.visuels.poliris.com/2d/5/d/0/c/5d0c1983-29a0.jpg,http://9.visuels.poliris.com/2d/9/7/b/5/97b5c1fc-3bc6.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4516,7 +4579,8 @@ var data= [
       "dateMaj": "2015-11-22T12:19:00",
       "dateCrea": "2015-11-15T23:14:00",
       "images": "http://2.visuels.poliris.com/2d/2/f/a/e/2fae7fda-56a4.jpg,http://e.visuels.poliris.com/2d/e/9/d/f/e9df52e3-32ea.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4539,7 +4603,8 @@ var data= [
       "dateMaj": "2015-11-22T12:19:00",
       "dateCrea": "2015-11-15T22:55:00",
       "images": "http://c.visuels.poliris.com/2d/c/d/9/e/cd9e2173-572e.jpg,http://e.visuels.poliris.com/2d/e/9/d/f/e9df52e3-32ea.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4562,7 +4627,8 @@ var data= [
       "dateMaj": "2015-11-22T12:19:00",
       "dateCrea": "2015-11-15T22:46:00",
       "images": "http://7.visuels.poliris.com/2d/7/6/3/a/763a38cf-6389.jpg,http://e.visuels.poliris.com/2d/e/9/d/f/e9df52e3-32ea.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4585,7 +4651,8 @@ var data= [
       "dateMaj": "2015-11-22T12:19:00",
       "dateCrea": "2015-11-14T13:21:00",
       "images": "http://2.visuels.poliris.com/2d/2/f/a/e/2fae7fda-56a4.jpg,http://e.visuels.poliris.com/2d/e/9/d/f/e9df52e3-32ea.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4684,7 +4751,8 @@ var data= [
       "dateMaj": "2015-11-26T16:35:00",
       "dateCrea": "2015-11-02T14:19:00",
       "images": "http://8.visuels.poliris.com/2d/8/d/5/b/8d5b4c83-b981.jpg,http://7.visuels.poliris.com/2d/7/f/8/3/7f83d589-7444.jpg,http://5.visuels.poliris.com/2d/5/0/3/4/5034613e-556b.jpg,http://6.visuels.poliris.com/2d/6/d/6/4/6d64a008-5ce6.jpg,http://0.visuels.poliris.com/2d/0/9/8/9/0989755b-5726.jpg,http://7.visuels.poliris.com/2d/7/6/0/1/76016335-6147.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -4761,7 +4829,8 @@ var data= [
       "images": "http://6.visuels.poliris.com/2d/6/d/c/f/6dcffcb1-38be.jpg,http://d.visuels.poliris.com/2d/d/c/7/8/dc785caf-3a4a.jpg,http://e.visuels.poliris.com/2d/e/a/3/a/ea3aea32-3d00.jpg,http://b.visuels.poliris.com/2d/b/6/b/e/b6be15cd-4977.jpg,http://6.visuels.poliris.com/2d/6/9/b/a/69bae902-433e.jpg,http://d.visuels.poliris.com/2d/d/d/7/8/dd78d319-4190.jpg,http://2.visuels.poliris.com/2d/2/8/9/7/289792b5-3633.jpg,http://5.visuels.poliris.com/2d/5/4/2/5/54250401-3712.jpg",
       "otherlinks": [],
       "ges": "d",
-      "nrj": "c"
+      "nrj": "c",
+      "priorite": ""
     },
     {
       "source": "seloger",
@@ -4834,6 +4903,7 @@ var data= [
       "images": "http://f.visuels.poliris.com/2d/f/1/6/b/f16b763b-2f12.jpg,http://e.visuels.poliris.com/2d/e/0/f/9/e0f92fe9-3a22.jpg,http://a.visuels.poliris.com/2d/a/4/2/1/a421da03-4fd8.jpg,http://e.visuels.poliris.com/2d/e/6/c/d/e6cdda56-3a98.jpg,http://1.visuels.poliris.com/2d/1/9/2/8/19284523-52e7.jpg",
       "priorite": "0",
       "otherlinks": [
+        "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/101159109.htm?p=CCCPo9LAAaPsfNLg",
         "http://www.seloger.com/annonces/achat/maison/castanet-tolosan-31/101159109.htm?p=CCCPo9LAAaPsfNLg"
       ],
       "ges": "b",
@@ -4939,7 +5009,8 @@ var data= [
       "images": "http://a.visuels.poliris.com/2d/a/9/9/c/a99cdba5-603d.jpg,http://f.visuels.poliris.com/2d/f/c/3/c/fc3c5913-69af.jpg,http://f.visuels.poliris.com/2d/f/7/3/4/f734c709-4ec2.jpg",
       "otherlinks": [],
       "ges": "d",
-      "nrj": "d"
+      "nrj": "d",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5137,7 +5208,8 @@ var data= [
       "images": "http://5.visuels.poliris.com/2d/5/d/2/9/5d299431-7368.jpg,http://e.visuels.poliris.com/2d/e/8/b/a/e8ba98ca-3e8a.jpg,http://9.visuels.poliris.com/2d/9/4/a/9/94a957d8-3606.jpg,http://c.visuels.poliris.com/2d/c/6/8/f/c68f97b3-4115.jpg,http://5.visuels.poliris.com/2d/5/b/7/3/5b732c1b-34ee.jpg,http://e.visuels.poliris.com/2d/e/2/c/5/e2c55744-3e73.jpg,http://0.visuels.poliris.com/2d/0/d/9/e/0d9e7e47-2cf0.jpg,http://f.visuels.poliris.com/2d/f/c/e/6/fce63f11-3627.jpg,http://9.visuels.poliris.com/2d/9/4/8/c/948c840a-7aa9.jpg,http://9.visuels.poliris.com/2d/9/7/0/8/970884e0-38eb.jpg",
       "otherlinks": [],
       "ges": "b",
-      "nrj": "d"
+      "nrj": "d",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5160,7 +5232,8 @@ var data= [
       "dateMaj": "2015-11-26T20:15:00",
       "dateCrea": "2015-10-01T19:59:00",
       "images": "http://5.visuels.poliris.com/2d/5/5/0/5/55059701-4709.jpg,http://2.visuels.poliris.com/2d/2/2/4/8/22481960-51fb.jpg,http://4.visuels.poliris.com/2d/4/1/a/6/41a666fe-4610.jpg,http://4.visuels.poliris.com/2d/4/a/d/e/4ade6114-4712.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5333,7 +5406,8 @@ var data= [
       "images": "http://4.visuels.poliris.com/2d/4/9/9/8/49988cd4-6132.jpg,http://7.visuels.poliris.com/2d/7/7/4/1/77411bb7-3aa6.jpg,http://2.visuels.poliris.com/2d/2/1/f/4/21f4042f-6508.jpg",
       "otherlinks": [],
       "ges": "c",
-      "nrj": "d"
+      "nrj": "d",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5356,7 +5430,9 @@ var data= [
       "dateMaj": "2015-11-25T16:23:00",
       "dateCrea": "2015-08-14T23:10:00",
       "images": "http://6.visuels.poliris.com/2d/6/3/c/d/63cd9907-9d11.jpg,http://d.visuels.poliris.com/2d/d/b/a/6/dba65c88-4d5d.jpg,http://8.visuels.poliris.com/2d/8/1/7/a/817aba3b-5813.jpg,http://5.visuels.poliris.com/2d/5/f/f/9/5ff9fe79-4a72.jpg,http://b.visuels.poliris.com/2d/b/1/b/e/b1be9e1b-4c16.jpg,http://c.visuels.poliris.com/2d/c/7/9/2/c79283d2-38e3.jpg,http://a.visuels.poliris.com/2d/a/5/0/d/a50d510e-2c75.jpg,http://9.visuels.poliris.com/2d/9/0/3/7/9037c351-3436.jpg,http://9.visuels.poliris.com/2d/9/f/7/5/9f757ff2-32c0.jpg,http://3.visuels.poliris.com/2d/3/c/e/b/3ceb0a8a-2fec.jpg,http://2.visuels.poliris.com/2d/2/b/d/d/2bdd680a-44d3.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "commentaire": "doublon",
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5591,7 +5667,8 @@ var data= [
       "ges": "b",
       "dateCrea": "2015-11-26T16:14:00",
       "images": "http://e.visuels.poliris.com/2d/e/6/2/d/e62de832-460c.jpg,http://3.visuels.poliris.com/2d/3/7/a/7/37a7756c-55ee.jpg,http://3.visuels.poliris.com/2d/3/5/a/f/35afbbae-2f53.jpg",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "source": "seloger",
@@ -5654,7 +5731,8 @@ var data= [
       "pieces": "6",
       "nrj": "a",
       "offres": "pro",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/888791041.htm?ca=16_s",
@@ -5680,7 +5758,8 @@ var data= [
       "pieces": "5",
       "nrj": "a",
       "offres": "pro",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/888515153.htm?ca=16_s",
@@ -5696,7 +5775,8 @@ var data= [
       "nrj": "a",
       "offres": "pro",
       "images": "<img src=\"http://img3.leboncoin.fr/thumbs/b2e/b2e1a6b9d064924794ab4d5543e01cdff50667cd.jpg\" alt=\"\">",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/888791037.htm?ca=16_s",
@@ -5709,7 +5789,8 @@ var data= [
       "pieces": "6",
       "nrj": "a",
       "offres": "pro",
-      "otherlinks": []
+      "otherlinks": [],
+      "priorite": "0"
     },
     {
       "url": "http://www.leboncoin.fr/ventes_immobilieres/888439986.htm?ca=16_s",
@@ -5724,6 +5805,8 @@ var data= [
       "ges": "e",
       "nrj": "d",
       "offres": "pro",
-      "images": "<img src=\"http://img4.leboncoin.fr/thumbs/cb6/cb6e203bc3ebe9c30a7939a05dd1deded695ce88.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/e96/e96dcedcb59d444dda22039278cf7ff2b768af9d.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/bd9/bd91e3968ecd366b5bcccfc0b01edd30940ff8b4.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/ee3/ee3253938b00bb6815e8843b46c17e59eba06e28.jpg\" alt=\"\">"
+      "images": "<img src=\"http://img4.leboncoin.fr/thumbs/cb6/cb6e203bc3ebe9c30a7939a05dd1deded695ce88.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/e96/e96dcedcb59d444dda22039278cf7ff2b768af9d.jpg\" alt=\"\">                                                  <img src=\"http://img3.leboncoin.fr/thumbs/bd9/bd91e3968ecd366b5bcccfc0b01edd30940ff8b4.jpg\" alt=\"\">                                                  <img src=\"http://img0.leboncoin.fr/thumbs/ee3/ee3253938b00bb6815e8843b46c17e59eba06e28.jpg\" alt=\"\">",
+      "otherlinks": []
     }
   ]
+}
