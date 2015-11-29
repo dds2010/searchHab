@@ -1,11 +1,11 @@
 #!/bin/sh
 
 
-downloadseloger=false
-url="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=1&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
-url2="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=2&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
-url3="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=3&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
-url4="http://ws.seloger.com/search.xml?ci=310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=4&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
+downloadseloger=true
+url="http://ws.seloger.com/search.xml?ci=310506,310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=1&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
+url2="http://ws.seloger.com/search.xml?ci=310506,310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=2&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
+url3="http://ws.seloger.com/search.xml?ci=310506,310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=3&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
+url4="http://ws.seloger.com/search.xml?ci=310506,310004,310048,310113,310113,310161,310162,310169,310254,310340,310429,310446&pxmin=200000&pxmax=350000&idtt=2&SEARCHpg=4&idtypebien=2&tri=d_dt_crea&getdtcreationmax=1"
 
 
 startDate="Le 21 Novembre 2015 00:00."
@@ -50,7 +50,7 @@ url3="http://www.leboncoin.fr/ventes_immobilieres/offres/midi_pyrenees/?f=a&th=1
 
 arrayurl=( $url1 $url2 $url3 )
 
-download=false
+download=true
 
 counterUrl=0
 

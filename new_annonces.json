@@ -1,1 +1,61 @@
-[]
+[
+  {
+    "source": "seloger",
+    "city": "Labege",
+    "cp": "31670",
+    "codeInsee": "310254",
+    "url": "http://www.seloger.com/annonces/achat/maison/labege-31/104343299.htm?p=CCCPo92wAjKAKkbg",
+    "idAnnonce": "104343299",
+    "idTiers": "9446",
+    "image": "http://2.visuels.poliris.com/2d/2/6/f/f/26ff25cd-552c.jpg",
+    "titre": "Maison traditionnelle",
+    "idTypeTransaction": "2",
+    "idSousTypeBien": "57",
+    "libelle": "MAISON Traditionnelle",
+    "description": "Secteur Labege au calme à pied des commerces, école, et transports, Topaze Immobilier vous propose cette maison traditionnelle T5 environ 150 M² en bon état générale dotée d une belle pièce de vie avec des chambres spacieuses dont une avec salle d eau attenante, une salle de bain double vasque, deux WC et garage sur un terrain environ de 430 m². Le plus: Panneaux solaires pour eau chaude et chauffage, économie de 50 %.",
+    "prix": "288000",
+    "nbChambre": "4",
+    "pieces": "5",
+    "surface": "150",
+    "dateMaj": "le 26 novembre &agrave; 19:57.",
+    "nrj": "c",
+    "consonrj": "132",
+    "consoges": "26",
+    "ges": "d",
+    "dateCrea": "2015-11-27T19:06:00",
+    "images": "http://2.visuels.poliris.com/2d/2/6/f/f/26ff25cd-552c.jpg,http://4.visuels.poliris.com/2d/4/2/d/a/42daf536-4098.jpg,http://3.visuels.poliris.com/2d/3/e/d/1/3ed11a04-3ebb.jpg,http://0.visuels.poliris.com/2d/0/f/5/c/0f5c1c33-826f.jpg,http://b.visuels.poliris.com/2d/b/8/8/c/b88c83d8-841b.jpg",
+    "otherlinks": [
+      "http://www.leboncoin.fr/ventes_immobilieres/888900558.htm?ca=16_s"
+    ]
+  },
+  {
+    "url": "http://www.leboncoin.fr/ventes_immobilieres/889158839.htm?ca=16_s",
+    "dateMaj": "le 27 novembre &agrave; 12:19.",
+    "image": "<img src=\"http://img3.leboncoin.fr/images/5fc/5fc2ed8e7909a88561f18fab2945315ffdc7fb2c.jpg\" alt=\"\">",
+    "description": "Constructeur de maison individuelle<br><br>Très beau projet de construction à 10 minutes de Toulouse sur un magnifique terrain de 2500 M² constructible, réalisez la villa de vos rêves. Entièrement réalisée sur mesure, grand salon panoramique avec vue sur les Pyrénées, très belle cuisine ouverte, grandes chambres avec rangements intégrés, belle salle de bain avec baignoire d angle, très grande suite parentale avec dressing XXL et salle de bain privative avec douche à l italienne. Chauffage basse consommation, menuiseries hautes performances énergétique. 31 450 Montgiscard, 31 320 Castanet Tolosan, 31 450 Pompertuzat   Contactez-nous au 05 61 74 52 15<br>Référence annonce : 6072",
+    "city": "ayguesvives",
+    "prix": "290000",
+    "titre": "villa_4_pieces_120_m2",
+    "surface": "120",
+    "pieces": "4",
+    "ges": "a",
+    "nrj": "a",
+    "offres": "pro",
+    "images": "<img src=\"http://img4.leboncoin.fr/thumbs/8c0/8c0ba635cc0e5832b6785415daec6cb08a318cd4.jpg\" alt=\"\">",
+    "otherlinks": []
+  },
+  {
+    "url": "http://www.leboncoin.fr/ventes_immobilieres/888971693.htm?ca=16_s",
+    "dateMaj": "le 27 novembre &agrave; 10:50.",
+    "image": "<img src=\"http://img1.leboncoin.fr/images/1ee/1ee4b27c2dfa2c1eebe85693bd2c490e06f072eb.jpg\" alt=\"\">",
+    "description": "Labège, maison T5 comprenant :<br>4 grandes chambres dont une suite parentale,<br>1 salle de bain avec wc,<br>1 wc indépendant,<br>Salon-séjour 43m²,<br>cuisine ouverte 17m²,<br>hall,<br>garage,<br>terrasse.<br><br>Le tout sur parcelle de 508m², à 2 minutes du centre-vlle et de toutes ses commodités.<br><br>Pour plus de renseignements demandez Pierre.",
+    "city": "labege",
+    "prix": "334000",
+    "titre": "maison_t5_140m2",
+    "surface": "140",
+    "pieces": "5",
+    "ges": "a",
+    "nrj": "a",
+    "offres": "pro"
+  }
+]

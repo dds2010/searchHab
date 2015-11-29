@@ -44,12 +44,12 @@
         $(document).ready(function () {
             //var data = generatedata(500);
 
-            /*dataStored=JSON.parse(localStorage["datas_search"]);
+            dataStored=JSON.parse(localStorage["datas_search"]);
             if(dataStored)
             {
                 data=dataStored;
                  console.log("retrieved from local Storage");
-            }*/
+            }
                 
            
 
@@ -70,6 +70,7 @@
                 { name: 'priorite', type: 'number' },
                 { name: 'commentaire', type: 'string' },
                 { name: 'source', type: 'string' },
+                { name: 'otherlinks' },
                     { name: 'titre', type: 'string' },
                     { name: 'city', type: 'string' },
                     { name: 'image', type: 'string' },
@@ -90,8 +91,16 @@
             var adapter = new $.jqx.dataAdapter(source);
 
         var cellsrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-                
-                    return '<br><br><br><a target="_blank" href="' + value + '">ANNONCE</a>';
+                    
+                    retour='<br><br><br><a target="_blank" href="' + value + '">ANNONCE</a>';
+                    var otherlinks=data[row].otherlinks;
+                    if(otherlinks && otherlinks.length>0){
+                        for(var i=0;i<otherlinks.length;i++){
+                            retour+='<br><br><br><a target="_blank" href="' + otherlinks[i] + '">ANNONCE</a>';
+                        }
+                    }
+
+                    return retour;
                 
             }
 
