@@ -5,18 +5,28 @@ var crontab = require('node-crontab');
 var nodemailer = require('nodemailer');
 
 var send=true;
+var sendEres=true;
 var total="TOTF.PA";
 
-var highLimit=49;
-var lowLimit=40;
+var limits={
+    "MT":{highLimit:5,lowLimit:4.44},
+    "FP":{highLimit:48,lowLimit:40},
+    "AIR":{highLimit:70,lowLimit:66},
+    "CS":{highLimit:26,lowLimit:25},
+    "AKE":{highLimit:71,lowLimit:65},
+    "ERESEDRACTIO.PA":{highLimit:25,lowLimit:20}
+}
 
-console.log(process.argv[2]);
+
+
 var passMail=process.argv[2];
-
-var jobId = crontab.scheduleJob("*/10 * 09-18 * * 1-5", function(){ //This will call this function every 2 minutes 
-    console.log("It's been 2 seconds!");
+var destMail=process.argv[3];
+var obj=[];
+var jobId = crontab.scheduleJob("*/2 09-18 * * 1-5", function(){ //This will call this function every 2 minutes 
     getYahooRealTimeQuote();
     getGoogleRealTimeQuote();
+   
+    fs.writeFileSync("bourse.log", JSON.stringify(obj, null, 2));
 });
 
 
@@ -40,9 +50,9 @@ var sendMail=function(message){
         }
     });
     transporter.sendMail({
-        to: 'dds@magellium.fr',
+        to: destMail,
         subject: 'hello',
-        text: 'hello world '+message
+        text: 'modif '+message
     });
 }
 
@@ -96,7 +106,7 @@ var getHistoricalQuote=function(){
 
 
 var getGoogleRealTimeQuote=function(){
-   var url='/finance/info?client=ig&q=EPA:FP';//,EPA:CS
+   var url='/finance/info?client=ig&q=EPA:FP,AMS:MT,EPA:AIR,EPA:CS,EPA:AKE';//,EPA:CS
 
 
     http.get({
@@ -121,14 +131,14 @@ var getGoogleRealTimeQuote=function(){
                    
                     //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
                     console.log("Google:"+stock.id+" "+stock.ltt+" "+stock.l_fix+" "+stock.c+" "+stock.cp+" "+stock.l);
-                    if(stock.l_fix>highLimit && send==true){
+                    if(stock.l_fix>limits[stock.t].highLimit && send==true){
                         console.log("sending"+stock.l_fix);
-                        sendMail(" hausse a "+stock.l_fix);
+                        sendMail(" hausse de "+stock.t+" a "+stock.l_fix);
                         send=false;
                     }
-                    else if(stock.l_fix<lowLimit && send==true){
+                    else if(stock.l_fix<limits[stock.t].lowLimit && send==true){
                         console.log("sending"+stock.l_fix);
-                        sendMail(" baisse a "+stock.l_fix);
+                        sendMail(" baisse de "+stock.t+" a "+stock.l_fix);
                         send=false;
                     }
 
@@ -143,7 +153,9 @@ var getGoogleRealTimeQuote=function(){
 
 
 var getYahooRealTimeQuote=function(){
-    var url='/webservice/v1/symbols/'+total+'/quote?format=json&view=detail';
+
+    eresCode="ERESEDRACTIO.PA";
+    var url='/webservice/v1/symbols/'+eresCode+'/quote?format=json&view=detail';
 
 
     http.get({
@@ -164,10 +176,17 @@ var getYahooRealTimeQuote=function(){
                 //OR: var totalReturned = _return.query.results.quote.length;
                 for (var i = 0; i < totalReturned; ++i) {
                     var stock = _return.list.resources[i].resource.fields;
-                   
+                    //console.log(stock);//symbol
                     //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
                     console.log("Yahoo:"+stock.name+" "+stock.utctime+" "+stock.price+" "+stock.day_high+" "+stock.day_low+" "+stock.volume);
-
+                    console.log(parseFloat(stock.price)>25);
+                    console.log(parseFloat(stock.price));
+                    if(parseFloat(stock.price)>limits[stock.symbol].highLimit && sendEres==true){
+                        obj.push({"message":stock,"test":parseFloat(stock.price)>limits[stock.symbol].highLimit})
+                        console.log("sending"+stock.price);
+                        sendMail(" hausse de ERES "+stock.price);
+                        sendEres=false;
+                    }
                 }
     });
         });
@@ -175,5 +194,6 @@ var getYahooRealTimeQuote=function(){
 
 }
 
-//getGoogleRealTimeQuote();
+getGoogleRealTimeQuote();
+getYahooRealTimeQuote();
 //sendMail();
