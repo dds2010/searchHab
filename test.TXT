@@ -1,1 +1,5 @@
 node update.js sample.json
+
+
+
+sc create nodeDDS binpath= "D:/dds/test/searchHab/srvany/srvany.exe"
