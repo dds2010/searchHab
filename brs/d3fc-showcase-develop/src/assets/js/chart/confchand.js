@@ -11,49 +11,109 @@ export default function() {
         openValue = function(d, i) { return d.open; },
         dataValue = function(d, i) { return d; };
 
+
+    var analyseday = function(dataValue0) {
+
+        if (dataValue0.open >= dataValue0.close) {
+            dataValue0.tendance = 'down';
+            dataValue0.lowOC = dataValue0.close;
+            dataValue0.highOC = dataValue0.open;
+            if (dataValue0.close === dataValue0.low && dataValue0.open === dataValue0.high) {
+                dataValue0.typebougie = 'marubozu';
+            }
+            else if (dataValue0.close === dataValue0.low) {
+                dataValue0.typemeche = 'meche haute';
+            }
+            else if (dataValue0.open === dataValue0.high) {
+                dataValue0.typemeche = 'meche basse';
+            }
+        }
+        else {
+            dataValue0.tendance = 'up';
+            dataValue0.lowOC = dataValue0.open;
+            dataValue0.highOC = dataValue0.close;
+            if (dataValue0.close === dataValue0.high && dataValue0.open === dataValue0.low) {
+                dataValue0.typebougie = 'marubozu';
+            }
+            else if (dataValue0.close === dataValue0.high) {
+                dataValue0.typemeche = 'meche basse';
+            }
+            else if (dataValue0.open === dataValue0.low) {
+                dataValue0.typemeche = 'meche haute';
+            }
+        }
+        dataValue0.ptMedian = (dataValue0.lowOC + dataValue0.highOC) / 2;
+        dataValue0.tailleCorps = dataValue0.highOC - dataValue0.lowOC;
+        dataValue0.tailleTotale = dataValue0.high - dataValue0.low;
+        dataValue0.tailleOmbre = dataValue0.tailleTotale - dataValue0.tailleCorps;
+
+        if (dataValue0.typemeche === 'meche basse') {
+            if (dataValue0.tailleCorps < dataValue0.tailleOmbre) {
+                dataValue0.typebougie = 'marteau';
+            }
+            else {
+                dataValue0.typebougie = 'passant de ceinture baissier';
+            }
+        }
+        else if (dataValue0.typemeche === 'meche haute') {
+            if (dataValue0.tailleCorps < dataValue0.tailleOmbre) {
+                dataValue0.typebougie = 'marteau inversé';
+            }
+            else {
+                dataValue0.typebougie = 'passant de ceinture haussier';
+            }
+        }
+
+        if ((dataValue0.tailleCorps / dataValue0.tailleTotale) < 0.02) {
+            dataValue0.typebougie = 'doji';
+        }
+
+    };
+
     var slidingWindow = fc.indicator.algorithm.calculator.slidingWindow()
-        .windowSize(2)
+        .windowSize(4)
         .accumulator(function(values) {
-            var dataValue0= dataValue(values[0]);
-            var dataValue1= dataValue(values[1]);
-            if(dataValue0.open>=dataValue0.close){
-                dataValue0.tendance = 'down';
-                dataValue0.lowOC = dataValue0.close;
-                dataValue0.highOC = dataValue0.open;
+            var dataValue0 = dataValue(values[2]);
+            var dataValue1 = dataValue(values[3]);
+            analyseday(dataValue0);
+            analyseday(dataValue1);
+
+            if (dataValue1.low > dataValue0.high) {
+                return 'gap';
             }
-            else{
-                dataValue0.tendance = 'up';
-                dataValue0.lowOC = dataValue0.open;
-                dataValue0.highOC = dataValue0.close;
-            }
-            if(dataValue1.open>=dataValue1.close){
-                dataValue1.tendance = 'down';
-                dataValue1.lowOC = dataValue1.close;
-                dataValue1.highOC = dataValue1.open;
-            }
-            else{
-                dataValue1.tendance = 'up';
-                dataValue1.lowOC = dataValue1.open;
-                dataValue1.highOC = dataValue1.close;
+            if (dataValue1.high < dataValue0.low) {
+                return 'gap';
             }
 
-            if(dataValue1.lowOC>dataValue0.lowOC && dataValue1.highOC<dataValue0.highOC && dataValue1.tendance!= dataValue0.tendance){
-                return 'harami';
+            if (dataValue1.lowOC > dataValue0.lowOC && dataValue1.highOC < dataValue0.highOC && dataValue1.tendance !== dataValue0.tendance) {
+                if (dataValue1.tendance === 'up') {
+                    return 'harami haussier';
+                }
+                else {
+                    return 'harami baissier';
+                }
+            }
+            if (dataValue1.lowOC < dataValue0.lowOC && dataValue1.highOC > dataValue0.highOC && dataValue1.tendance !== dataValue0.tendance) {
+                if (dataValue1.tendance === 'up') {
+                    return 'englobante haussiere';
+                }
+                else {
+                    return 'englobante baissiere';
+                }
+            }
+            //Ligne de poussée
+            if (dataValue1.tendance === 'up' && dataValue0.tendance === 'down' && dataValue1.lowOC < dataValue0.lowOC && dataValue1.highOC < dataValue0.ptMedian && dataValue1.highOC > dataValue0.lowOC) {
+                return 'Ligne de poussée';
             }
 
-
-            return {dataValue0: dataValue(values[0]),
-                    dataValue1: dataValue(values[1]),
-                    highValue0: highValue(values[0]),
-                    highValue1: highValue(values[1])
-            };
+            return dataValue1.typebougie;
             //return (closeValue(values[1]) - closeValue(values[0])) * volumeValue(values[1]);
         });
 
     var confchand = function(data) {
         return slidingWindow(data);
     };
- 
+
     confchand.dataValue = function(x) {
         if (!arguments.length) {
             return dataValue;
@@ -92,7 +152,7 @@ export default function() {
         return confchand;
     };
 
-      confchand.openValue = function(x) {
+    confchand.openValue = function(x) {
         if (!arguments.length) {
             return openValue;
         }

@@ -77,6 +77,12 @@ module.exports = function(grunt) {
                     expand: true
                 },
                 {
+                    cwd: '../',
+                    src: ['test.json'],
+                    dest: 'dist',
+                    expand: true
+                },
+                {
                     cwd: 'node_modules/d3fc/node_modules/css-layout/dist/',
                     src: ['css-layout.js'],
                     dest: 'dist/assets/js',
