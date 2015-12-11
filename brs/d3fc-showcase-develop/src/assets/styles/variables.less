@@ -1,0 +1,128 @@
+// Colour Scheme
+// Primary colours
+@primary-dark-blue: #263337;
+@primary-blue: #7B9FA1;
+@primary-white: #FFFFFF;
+@brand-primary: @primary-blue;
+
+// Secondary colours
+@secondary-dark-blue: #1C2629;
+@secondary-blue: #377EB8;
+@secondary-grey: #3C4F53;
+@secondary-orange: #FF7F00;
+
+// Tertiary colours
+@tertiary-purple: #984EA3;
+@tertiary-green: #4DAF4A;
+@tertiary-red: #E41A1C;
+@tertiary-pink: #F781BF;
+@tertiary-yellow: #FFFF33;
+@tertiary-blue: #A6CEE3;
+
+// Font
+@font-family: 'Roboto', sans-serif;
+@font-family-sans-serif: @font-family;
+@font-colour: @primary-white;
+@text-color: @font-colour;
+@font-weight-base: 300;
+@line-height-base: 1.5;
+
+// Font sizes
+@font-size-title: 24px;
+@font-size-huge: 20px;
+@font-size-large: 18px;
+@font-size-base: 16px;
+@font-size-small: 14px;
+@font-size-tiny: 12px;
+
+// Components
+@border-radius-base: 2px;
+@border-radius-large: 3px;
+@border-radius-small: 1px;
+
+// Background
+@background-colour: @primary-dark-blue;
+
+// Buttons
+@btn-primary-color: @brand-primary;
+@btn-primary-bg: @primary-dark-blue;
+@btn-primary-border: @secondary-grey;
+
+// Dropdown
+@dropdown-colour: @secondary-grey;
+@dropdown-hover: fade(@primary-white, 20%);
+@caret-colour: @primary-blue;
+
+// Plot Area
+@stroke-width: 1px;
+@area-fill: fade(@series-colour, 75%);
+@series-colour: @secondary-orange;
+
+// Plot Area - Candlestick
+@candlestick-down-stroke: red;
+@candlestick-up-stroke: green;
+@candlestick-down-fill: red;
+@candlestick-up-fill: green;
+
+// Plot Area - Moving Average
+@moving-average-colour: @tertiary-yellow;
+
+// Plot Area - Bollinger
+@bollinger-upper-colour: @tertiary-blue;
+@bollinger-lower-colour: @tertiary-blue;
+@bollinger-fill-colour: fade(@primary-white, 20%);
+
+// Gridlines
+@gridline-colour: @secondary-grey;
+
+// Closing
+@closing-colour: @secondary-blue;
+
+// Primary Y Axis
+@y-axis-width: 60px;
+
+// Shared X Axis
+@x-axis-height: 23px;
+
+// Navigator
+// Changes to height or bottom-margin must also be carried over in nav.js variables
+@navigator-height: 100px;
+@navigator-bottom-margin-from-javascript: 40px;   //Temporary variable until fully ported to flex
+@navigator-extent-colour: @primary-white;
+@navigator-colour: @primary-blue;
+@navigator-background-colour: @secondary-dark-blue;
+@navigator-background-stroke-width: 2px;
+@navigator-stroke: 1px;
+@navigator-stroke-colour: @primary-white;
+@navigator-selection-border-colour: @primary-white;
+
+// Sidebar
+@bootstrap-padding-width: 15px;
+@sidebar-width: 33.3%;
+@bootstrap-md-width : 991px;
+
+// Menu
+@option-group-padding: 15px;
+
+// Crosshair
+@crosshair-line-colour: @tertiary-blue;
+@crosshair-circle-colour: @tertiary-blue;
+@crosshair-circle-opacity: 0.75;
+@crosshair-colour: fade(@primary-blue, 20%);
+
+// Legend
+@legend-background-colour: @background-colour;
+@legend-label-font-colour: @secondary-grey;
+@legend-value-font-colour: @primary-blue;
+
+// Head
+@period-selector-font-colour: @primary-blue;
+@head-height: 48px;
+
+// Secondary Chart
+// RSI
+@rsi-line-colour: @tertiary-purple;
+
+// MACD
+@macd-signal-line-colour: @tertiary-red;
+@macd-line-colour: @tertiary-green;
