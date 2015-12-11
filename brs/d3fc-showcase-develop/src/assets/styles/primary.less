@@ -1,0 +1,91 @@
+#primary-container {
+  path.line {
+    stroke: @series-colour;
+    stroke-width: @stroke-width;
+
+    &.movingAverage {
+      stroke: @moving-average-colour;
+    }
+  }
+  
+  path.down {
+    stroke: @candlestick-down-stroke;
+    stroke-width: @stroke-width;
+    fill: @candlestick-down-fill;
+  }
+  
+  path.up {
+    stroke: @candlestick-up-stroke;
+    stroke-width: @stroke-width;
+    fill: @candlestick-up-fill;
+  }
+
+  .upper > path.line {
+    stroke: @bollinger-upper-colour;
+    stroke-width: @stroke-width;
+  }
+
+  .lower > path.line {
+    stroke: @bollinger-lower-colour;
+    stroke-width: @stroke-width;
+  }
+
+  .average > path.line {
+    visibility: hidden;
+  }
+
+  .area > path.area {
+    fill: @bollinger-fill-colour;
+  }
+
+  .area {
+    fill: @area-fill;
+  }
+
+  .point {
+    stroke: @series-colour;
+    fill: @series-colour;
+  }
+
+  .gridline {
+    stroke: @gridline-colour;
+  }
+
+  .background {
+    stroke: @gridline-colour;
+    stroke-width: @stroke-width;
+  }
+
+  .ohlc {
+    stroke: @series-colour;
+    stroke-width: @stroke-width;
+  }
+
+  .crosshair {
+    .point {
+      fill: @crosshair-circle-colour;
+      fill-opacity: @crosshair-circle-opacity;
+      stroke: darken(@crosshair-circle-colour, 20%);
+    }
+    .annotation > line {
+      stroke: @crosshair-line-colour;
+      stroke-dasharray: 3, 10;
+    }
+    &.band {
+      .point {
+        .hidden;
+      }
+      .annotation {
+        &.horizontal {
+          .hidden;
+        }
+        > line {
+          stroke: @crosshair-colour;
+          stroke-dasharray: 0;
+        }
+      }
+    }
+  }
+
+  background-color: @background-colour;
+}

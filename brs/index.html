@@ -6,7 +6,7 @@
 	#low-barrel {
   margin: 20px auto;
   width: 100%;
-  height: 400px;
+  height: 600px;
   shape-rendering: crispEdges;
 }
 
@@ -64,7 +64,7 @@ rect.extent {
 
 </head>
 <body>
-<div id="chart" style="width: 100%; height: 250px"></div>
+<div id="chart" style="width: 100%; height: 150px"></div>
 <svg id="low-barrel">
   <g layout-style="flex: 0.65; flexDirection: row">
     <svg class="main" layout-style="flex: 1"></svg>
@@ -475,6 +475,11 @@ d3.select('#chart').append('g')
                     Math.max(0, bisector.left(data, data.dateDomain[0]) - 1),
                     Math.min(bisector.right(data, data.dateDomain[1]) + 1, data.length)
                 );
+visibleData =data;
+
+                                //console.log(Math.max(0, bisector.left(data, data.dateDomain[0]) - 1));
+                //console.log(Math.min(bisector.right(data, data.dateDomain[1]) + 1, data.length));
+                //console.log(visibleData);
                 visibleData.dateDomain = data.dateDomain;
                 visibleData.crosshairs = data.crosshairs;
 
@@ -499,13 +504,131 @@ d3.select('#chart').append('g')
         return lowBarrel;
     };
 
+    example.getHistoricalQuote=function(){
+
+    var total="TOTF.PA";
+    var startDate = '2012-01-01';
+    var endDate = '2013-01-08';
+    var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+total+'","CS.PA") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
+
+
+    var url='/v1/public/yql?q=' + data + "&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
+
+
+
+
+d3.json('test.json', function(json) {
+    var _return = json;
+                //console.log(_return);
+                //console.log(_return.query);
+
+                 var totalReturned = _return.query.count;
+                //OR: var totalReturned = _return.query.results.quote.length;
+                for (var i = 0; i < totalReturned; ++i) {
+                    var stock = _return.query.results.quote[i];
+                    //console.log(stock);
+                    var symbol = stock.Symbol;
+                    var percent_change = stock.Change_PercentChange;
+                    var changeRealTime = stock.ChangeRealtime;
+                    stock.date=new Date(stock.Date);
+                    stock.date.setHours(0);
+                    stock.date.setMinutes(0);
+                    stock.date.setSeconds(0);
+                    /*stock.open=parseFloat(stock.Open);
+                    stock.high=parseFloat(stock.High);
+                    stock.low=parseFloat(stock.Low);
+                    stock.close=parseFloat(stock.Close);
+                    stock.volume=parseFloat(stock.Volume);*/
+                    _return.query.results.quote[i]={
+                        date:stock.date,
+                    open:parseFloat(stock.Open),
+                    high:parseFloat(stock.High),
+                    low:parseFloat(stock.Low),
+                    close:parseFloat(stock.Close),
+                    volume:parseFloat(stock.Volume),
+                    }
+                    //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
+                    console.log(stock.Symbol+" "+stock.Date+" "+stock.Open+" "+stock.High+" "+stock.Low+" "+stock.Close);
+
+                }
+                
+                var data=_return.query.results.quote;
+                /*var data = fc.data.random.financial()
+            .startDate(new Date(2014, 1, 1))(250);*/
+
+                console.log(data);
+                 data.crosshairs = [];
+        var maxDate = fc.util.extent().fields('date')(data)[1];
+       var maxDateDomain = new Date(maxDate + 5 * 24 * 60 * 60 * 1000);
+        var minDate = new Date(maxDate - 5 * 24 * 60 * 60 * 1000);
+        data.dateDomain = [minDate, maxDate];
+        data.navigatorDateDomain = fc.util.extent().fields('date')(data);
+        //data.navigatorDateDomain = [maxDateDomain,minDate];
+        data.navigatorYDomain = fc.util.extent().fields('close')(data);
+        //data.navigatorYDomain =[5,50];
+
+        var container = d3.select('#low-barrel')
+            .layout();
+
+
+var extent = fc.util.innerDimensions(document.getElementById('low-barrel'));
+var width = extent.width,
+    height = extent.height;
+
+
+
+// Create scale for x axis
+var xScale = fc.scale.dateTime()
+    .domain(fc.util.extent().fields('date')(data))
+    .range([0, width]);
+
+// Create scale for y axis
+var yScale = d3.scale.linear()
+    .domain(fc.util.extent().fields(['high', 'low'])(data)).range([height, 0])
+    .nice();
+
+        var bollingerAlgorithm = fc.indicator.algorithm.bollingerBands();
+        bollingerAlgorithm(data);
+
+        // Create the renderer
+        var bollinger = fc.indicator.renderer.bollingerBands().xScale(xScale)
+                    .yScale(yScale);
+
+        var render = fc.util.render(function() {
+            container.datum(data)
+                .call(lowBarrel).call(bollinger);
+        });
+
+        var lowBarrel = example.lowBarrel()
+            .on('crosshair', render)
+            .on('navigate', function(domain) {
+                data.dateDomain = [
+                    new Date(Math.max(domain[0], data.navigatorDateDomain[0])),
+                    new Date(Math.min(domain[1], data.navigatorDateDomain[1]))
+                ];
+               // data.navigatorYDomain = fc.util.extent().fields('close')(data);
+               // console.log(data);
+               
+                render();
+            });
+
+        render();
+
+}
+);
+
+
+
+
+};
     // Wrap in function to demonstrate no global access to state variables
     (function() {
         var data = fc.data.random.financial()
             .startDate(new Date(2014, 1, 1))(250);
 
+            console.log(data);
         // Enhance data with interactive state
-        data.crosshairs = [];
+        /*data.crosshairs = [];
         var maxDate = fc.util.extent().fields('date')(data)[1];
         var minDate = new Date(maxDate - 50 * 24 * 60 * 60 * 1000);
         data.dateDomain = [minDate, maxDate];
@@ -530,7 +653,8 @@ d3.select('#chart').append('g')
                 render();
             });
 
-        render();
+        render();*/
+        example.getHistoricalQuote();
     }());
 
 }(d3, fc, {}));
