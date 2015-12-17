@@ -14,7 +14,7 @@ var limits={
     "AKE":{highLimit:71,lowLimit:65,send:true},
     "VIE":{highLimit:24,lowLimit:21,send:true},
     "DSY":{highLimit:77,lowLimit:72,send:true},
-    "DSY":{highLimit:66,lowLimit:61,send:true},
+    "BN":{highLimit:66,lowLimit:61,send:true},
     "ERESEDRACTIO.PA":{highLimit:25,lowLimit:20,send:true},
     "FR0010106880.PA":{highLimit:180,lowLimit:160,send:true}
 }
