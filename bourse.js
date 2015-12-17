@@ -58,11 +58,11 @@ var sendMail=function(message){
     });
 }
 
-var getHistoricalQuote=function(){
+var getHistoricalQuote=function(name){
 
-    var startDate = '2012-01-01';
-    var endDate = '2013-01-08';
-    var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+total+'","CS.PA") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
+    var startDate = '2015-01-01';
+    var endDate = '2015-12-17';
+    var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+name+'") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
 
 
     url='/v1/public/yql?q=' + data + "&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
@@ -86,7 +86,7 @@ var getHistoricalQuote=function(){
                 var _return = JSON.parse(body);
                 //console.log(_return);
                 console.log(_return.query);
-
+                 fs.writeFileSync('brs/data/'+name+'.json', JSON.stringify(_return, null, 2));
                  var totalReturned = _return.query.count;
                 //OR: var totalReturned = _return.query.results.quote.length;
                 for (var i = 0; i < totalReturned; ++i) {
@@ -243,7 +243,9 @@ var ATOUTEUROLAND="FR0010106880.PA";
 
 
 }
+getHistoricalQuote("CS.PA");
+getHistoricalQuote("AKE.PA");
 
-getGoogleRealTimeQuote();
-getYahooRealTimeQuote();
+//getGoogleRealTimeQuote();
+//getYahooRealTimeQuote();
 //sendMail();

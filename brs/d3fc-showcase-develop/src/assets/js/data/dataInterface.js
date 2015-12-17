@@ -68,7 +68,7 @@ export default function() {
 
     dataInterface.generateDatas = function() {
         invalidate();
-        d3.json('test.json', function(json) {
+        d3.json('AKE.PA.json', function(json) {
             var _return = json;
 
             var totalReturned = _return.query.count;
