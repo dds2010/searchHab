@@ -6,6 +6,7 @@ import util from '../../util/util';
 export default function() {
 
     var candlestick = candlestickSeries();
+
     candlestick.id = util.uid();
     var candlestickOption = option(
       'Candlestick',
@@ -19,6 +20,35 @@ export default function() {
 
     var line = fc.series.line();
     line.id = util.uid();
+
+    ohlc.decorate(function(sel) {
+        /*sel.attr('fill', function(d, i) { return '#AEDEDE'; })
+            .attr('stroke', function(d, i) { return '#FFFFFF'; })
+            .attr('class', '');*/
+
+        sel.append('circle')
+            .attr('r', function(d, i) {
+                if (d.action === 'buy') {
+                    return 10;
+                }
+                else if (d.action === 'sell') {
+                    return 10;
+                }
+                return 0;
+            })
+            .attr('fill', function(d, i) {
+                if (d.action === 'buy') {
+                    return 'green';
+                }
+                else if (d.action === 'sell') {
+                    return 'red';
+                }
+                return 0;
+            }).attr('cy', 50);
+        /*sel.select('circle')
+            .attr('cx', function(d) { return d.target ? 100 : 20; })
+            .attr('cy', function(d) { return d.target ? 100 : 60; });*/
+    });
 
     var point = fc.series.point();
     point.id = util.uid();
