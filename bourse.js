@@ -4,17 +4,19 @@ var http = require('http');
 var crontab = require('node-crontab');
 var nodemailer = require('nodemailer');
 
-var send=true;
-var sendEres=true;
 var total="TOTF.PA";
 
 var limits={
-    "MT":{highLimit:5,lowLimit:4.44},
-    "FP":{highLimit:48,lowLimit:40},
-    "AIR":{highLimit:70,lowLimit:66},
-    "CS":{highLimit:26,lowLimit:25},
-    "AKE":{highLimit:71,lowLimit:65},
-    "ERESEDRACTIO.PA":{highLimit:25,lowLimit:20}
+    "MT":{highLimit:5,lowLimit:4.44,send:true},
+    "FP":{highLimit:48,lowLimit:40,send:true},
+    "AIR":{highLimit:67.80,lowLimit:66.8,send:true},
+    "CS":{highLimit:26,lowLimit:25,send:true},
+    "AKE":{highLimit:71,lowLimit:65,send:true},
+    "VIE":{highLimit:24,lowLimit:21,send:true},
+    "DSY":{highLimit:77,lowLimit:72,send:true},
+    "BN":{highLimit:66,lowLimit:61,send:true},
+    "ERESEDRACTIO.PA":{highLimit:25,lowLimit:20,send:true},
+    "FR0010106880.PA":{highLimit:180,lowLimit:160,send:true}
 }
 
 
@@ -56,11 +58,11 @@ var sendMail=function(message){
     });
 }
 
-var getHistoricalQuote=function(){
+var getHistoricalQuote=function(name){
 
-    var startDate = '2012-01-01';
-    var endDate = '2013-01-08';
-    var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+total+'","CS.PA") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
+    var startDate = '2015-01-01';
+    var endDate = '2015-12-17';
+    var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+name+'") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
 
 
     url='/v1/public/yql?q=' + data + "&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
@@ -84,7 +86,7 @@ var getHistoricalQuote=function(){
                 var _return = JSON.parse(body);
                 //console.log(_return);
                 console.log(_return.query);
-
+                 fs.writeFileSync('brs/data/'+name+'.json', JSON.stringify(_return, null, 2));
                  var totalReturned = _return.query.count;
                 //OR: var totalReturned = _return.query.results.quote.length;
                 for (var i = 0; i < totalReturned; ++i) {
@@ -106,7 +108,7 @@ var getHistoricalQuote=function(){
 
 
 var getGoogleRealTimeQuote=function(){
-   var url='/finance/info?client=ig&q=EPA:FP,AMS:MT,EPA:AIR,EPA:CS,EPA:AKE';//,EPA:CS
+   var url='/finance/info?client=ig&q=EPA:FP,AMS:MT,EPA:AIR,EPA:CS,EPA:AKE,EPA:VIE,EPA:DSY,EPA:BN';//,EPA:CS
 
 
     http.get({
@@ -130,16 +132,16 @@ var getGoogleRealTimeQuote=function(){
                     var stock = _return[i];
                    
                     //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
-                    console.log("Google:"+stock.id+" "+stock.ltt+" "+stock.l_fix+" "+stock.c+" "+stock.cp+" "+stock.l);
-                    if(stock.l_fix>limits[stock.t].highLimit && send==true){
+                    console.log("Google:"+stock.t+" "+stock.ltt+" "+stock.l_fix+" "+stock.c+" "+stock.cp+" "+stock.l);
+                    if(stock.l_fix>limits[stock.t].highLimit && limits[stock.t].send){
                         console.log("sending"+stock.l_fix);
                         sendMail(" hausse de "+stock.t+" a "+stock.l_fix);
-                        send=false;
+                        limits[stock.t].send=false;
                     }
-                    else if(stock.l_fix<limits[stock.t].lowLimit && send==true){
+                    else if(stock.l_fix<limits[stock.t].lowLimit && limits[stock.t].send){
                         console.log("sending"+stock.l_fix);
                         sendMail(" baisse de "+stock.t+" a "+stock.l_fix);
-                        send=false;
+                        limits[stock.t].send=false;
                     }
 
                 }
@@ -155,6 +157,8 @@ var getGoogleRealTimeQuote=function(){
 var getYahooRealTimeQuote=function(){
 
     eresCode="ERESEDRACTIO.PA";
+
+    
     var url='/webservice/v1/symbols/'+eresCode+'/quote?format=json&view=detail';
 
 
@@ -181,11 +185,57 @@ var getYahooRealTimeQuote=function(){
                     console.log("Yahoo:"+stock.name+" "+stock.utctime+" "+stock.price+" "+stock.day_high+" "+stock.day_low+" "+stock.volume);
                     console.log(parseFloat(stock.price)>25);
                     console.log(parseFloat(stock.price));
-                    if(parseFloat(stock.price)>limits[stock.symbol].highLimit && sendEres==true){
+                    if(parseFloat(stock.price)>limits[stock.symbol].highLimit && limits[stock.symbol].send){
                         obj.push({"message":stock,"test":parseFloat(stock.price)>limits[stock.symbol].highLimit})
                         console.log("sending"+stock.price);
                         sendMail(" hausse de ERES "+stock.price);
-                        sendEres=false;
+                        limits[stock.symbol].send=false;
+                    }
+                    else if(parseFloat(stock.price)<limits[stock.symbol].lowLimit && limits[stock.symbol].send){
+                        
+                        console.log("sending"+stock.price);
+                        sendMail(" baisse de ERES "+stock.price);
+                        limits[stock.symbol].send=false;
+                    }
+                }
+    });
+        });
+
+var ATOUTEUROLAND="FR0010106880.PA";
+ var url='/webservice/v1/symbols/'+ATOUTEUROLAND+'/quote?format=json&view=detail';
+
+
+    http.get({
+            host: 'finance.yahoo.com',
+            path: url
+        }, function(response) {
+            var body = '';
+            response.on('data', function(d) {
+                body += d;
+            });
+            response.on('end', function(){
+
+                var _return = JSON.parse(body);
+                //console.log(_return);
+                //console.log(_return.list.resources[0].resource.fields.price);
+
+                 var totalReturned = _return.list.resources.length;
+                //OR: var totalReturned = _return.query.results.quote.length;
+                for (var i = 0; i < totalReturned; ++i) {
+                    var stock = _return.list.resources[i].resource.fields;
+                    
+                    console.log("Yahoo:"+stock.name+" "+stock.utctime+" "+stock.price+" "+stock.day_high+" "+stock.day_low+" "+stock.volume);
+                    if(parseFloat(stock.price)>limits[stock.symbol].highLimit && limits[stock.symbol].send){
+                        obj.push({"message":stock,"test":parseFloat(stock.price)>limits[stock.symbol].highLimit})
+                        console.log("sending"+stock.price);
+                        sendMail(" hausse de ATOUTEUROLAND "+stock.price);
+                        limits[stock.symbol].send=false;
+                    }
+                    else if(parseFloat(stock.price)<limits[stock.symbol].lowLimit && limits[stock.symbol].send){
+                        
+                        console.log("sending"+stock.price);
+                        sendMail(" baisse de ATOUTEUROLAND "+stock.price);
+                        limits[stock.symbol].send=false;
                     }
                 }
     });
@@ -193,7 +243,9 @@ var getYahooRealTimeQuote=function(){
 
 
 }
+getHistoricalQuote("CS.PA");
+getHistoricalQuote("AKE.PA");
 
-getGoogleRealTimeQuote();
-getYahooRealTimeQuote();
+//getGoogleRealTimeQuote();
+//getYahooRealTimeQuote();
 //sendMail();

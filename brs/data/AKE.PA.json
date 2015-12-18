@@ -1,0 +1,2511 @@
+{
+  "query": {
+    "count": 250,
+    "created": "2015-12-17T22:16:07Z",
+    "lang": "en-US",
+    "results": {
+      "quote": [
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-16",
+          "Open": "63.12",
+          "High": "64.14",
+          "Low": "62.86",
+          "Close": "63.49",
+          "Volume": "184900",
+          "Adj_Close": "63.49"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-15",
+          "Open": "61.78",
+          "High": "63.17",
+          "Low": "61.61",
+          "Close": "62.93",
+          "Volume": "190900",
+          "Adj_Close": "62.93"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-14",
+          "Open": "62.26",
+          "High": "63.07",
+          "Low": "61.00",
+          "Close": "61.24",
+          "Volume": "270700",
+          "Adj_Close": "61.24"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-11",
+          "Open": "63.89",
+          "High": "63.89",
+          "Low": "61.85",
+          "Close": "62.02",
+          "Volume": "273000",
+          "Adj_Close": "62.02"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-10",
+          "Open": "64.67",
+          "High": "65.33",
+          "Low": "63.85",
+          "Close": "64.00",
+          "Volume": "190900",
+          "Adj_Close": "64.00"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-09",
+          "Open": "65.70",
+          "High": "66.30",
+          "Low": "64.00",
+          "Close": "64.92",
+          "Volume": "319800",
+          "Adj_Close": "64.92"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-08",
+          "Open": "66.53",
+          "High": "66.91",
+          "Low": "64.80",
+          "Close": "65.44",
+          "Volume": "173600",
+          "Adj_Close": "65.44"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-07",
+          "Open": "66.49",
+          "High": "67.39",
+          "Low": "66.34",
+          "Close": "66.99",
+          "Volume": "238900",
+          "Adj_Close": "66.99"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-04",
+          "Open": "67.08",
+          "High": "67.13",
+          "Low": "65.40",
+          "Close": "66.14",
+          "Volume": "217600",
+          "Adj_Close": "66.14"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-03",
+          "Open": "69.05",
+          "High": "69.66",
+          "Low": "66.01",
+          "Close": "66.95",
+          "Volume": "417300",
+          "Adj_Close": "66.95"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-02",
+          "Open": "67.44",
+          "High": "67.89",
+          "Low": "66.20",
+          "Close": "67.04",
+          "Volume": "188300",
+          "Adj_Close": "67.04"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-12-01",
+          "Open": "68.15",
+          "High": "68.69",
+          "Low": "67.17",
+          "Close": "67.34",
+          "Volume": "227200",
+          "Adj_Close": "67.34"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-30",
+          "Open": "67.27",
+          "High": "68.57",
+          "Low": "67.00",
+          "Close": "68.19",
+          "Volume": "349300",
+          "Adj_Close": "68.19"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-27",
+          "Open": "67.25",
+          "High": "67.95",
+          "Low": "66.46",
+          "Close": "66.59",
+          "Volume": "180300",
+          "Adj_Close": "66.59"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-26",
+          "Open": "67.20",
+          "High": "68.00",
+          "Low": "67.20",
+          "Close": "67.70",
+          "Volume": "133700",
+          "Adj_Close": "67.70"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-25",
+          "Open": "65.76",
+          "High": "67.39",
+          "Low": "65.74",
+          "Close": "67.04",
+          "Volume": "160800",
+          "Adj_Close": "67.04"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-24",
+          "Open": "66.60",
+          "High": "66.60",
+          "Low": "64.93",
+          "Close": "65.76",
+          "Volume": "203300",
+          "Adj_Close": "65.76"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-23",
+          "Open": "66.39",
+          "High": "67.40",
+          "Low": "65.67",
+          "Close": "67.06",
+          "Volume": "205700",
+          "Adj_Close": "67.06"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-20",
+          "Open": "66.10",
+          "High": "66.54",
+          "Low": "65.41",
+          "Close": "66.39",
+          "Volume": "136400",
+          "Adj_Close": "66.39"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-19",
+          "Open": "65.51",
+          "High": "66.76",
+          "Low": "65.40",
+          "Close": "66.14",
+          "Volume": "216100",
+          "Adj_Close": "66.14"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-18",
+          "Open": "65.22",
+          "High": "65.43",
+          "Low": "64.73",
+          "Close": "64.99",
+          "Volume": "244700",
+          "Adj_Close": "64.99"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-17",
+          "Open": "64.47",
+          "High": "65.74",
+          "Low": "64.32",
+          "Close": "65.67",
+          "Volume": "198900",
+          "Adj_Close": "65.67"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-16",
+          "Open": "63.16",
+          "High": "64.90",
+          "Low": "63.15",
+          "Close": "64.08",
+          "Volume": "178800",
+          "Adj_Close": "64.08"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-13",
+          "Open": "63.71",
+          "High": "64.25",
+          "Low": "63.20",
+          "Close": "63.92",
+          "Volume": "198400",
+          "Adj_Close": "63.92"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-12",
+          "Open": "65.84",
+          "High": "65.84",
+          "Low": "63.59",
+          "Close": "63.72",
+          "Volume": "264700",
+          "Adj_Close": "63.72"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-11",
+          "Open": "66.19",
+          "High": "66.80",
+          "Low": "65.79",
+          "Close": "65.95",
+          "Volume": "250300",
+          "Adj_Close": "65.95"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-10",
+          "Open": "67.56",
+          "High": "68.79",
+          "Low": "64.88",
+          "Close": "66.31",
+          "Volume": "379600",
+          "Adj_Close": "66.31"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-09",
+          "Open": "68.64",
+          "High": "69.20",
+          "Low": "67.21",
+          "Close": "67.26",
+          "Volume": "253000",
+          "Adj_Close": "67.26"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-06",
+          "Open": "67.69",
+          "High": "69.35",
+          "Low": "67.36",
+          "Close": "68.74",
+          "Volume": "151200",
+          "Adj_Close": "68.74"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-05",
+          "Open": "67.88",
+          "High": "68.17",
+          "Low": "67.23",
+          "Close": "67.66",
+          "Volume": "174900",
+          "Adj_Close": "67.66"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-04",
+          "Open": "68.31",
+          "High": "68.68",
+          "Low": "67.64",
+          "Close": "67.76",
+          "Volume": "246100",
+          "Adj_Close": "67.76"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-03",
+          "Open": "67.44",
+          "High": "68.01",
+          "Low": "67.30",
+          "Close": "67.90",
+          "Volume": "183000",
+          "Adj_Close": "67.90"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-11-02",
+          "Open": "65.94",
+          "High": "67.89",
+          "Low": "65.90",
+          "Close": "67.65",
+          "Volume": "153700",
+          "Adj_Close": "67.65"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-30",
+          "Open": "66.46",
+          "High": "66.79",
+          "Low": "65.67",
+          "Close": "66.61",
+          "Volume": "166400",
+          "Adj_Close": "66.61"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-29",
+          "Open": "66.43",
+          "High": "66.66",
+          "Low": "65.60",
+          "Close": "66.43",
+          "Volume": "159700",
+          "Adj_Close": "66.43"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-28",
+          "Open": "65.21",
+          "High": "66.27",
+          "Low": "64.87",
+          "Close": "65.95",
+          "Volume": "155500",
+          "Adj_Close": "65.95"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-27",
+          "Open": "66.22",
+          "High": "66.57",
+          "Low": "65.13",
+          "Close": "65.16",
+          "Volume": "208700",
+          "Adj_Close": "65.16"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-26",
+          "Open": "67.60",
+          "High": "67.72",
+          "Low": "66.79",
+          "Close": "67.05",
+          "Volume": "211500",
+          "Adj_Close": "67.05"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-23",
+          "Open": "67.03",
+          "High": "68.66",
+          "Low": "66.65",
+          "Close": "67.75",
+          "Volume": "228200",
+          "Adj_Close": "67.75"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-22",
+          "Open": "64.28",
+          "High": "66.66",
+          "Low": "63.95",
+          "Close": "66.54",
+          "Volume": "269600",
+          "Adj_Close": "66.54"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-21",
+          "Open": "63.41",
+          "High": "64.66",
+          "Low": "62.63",
+          "Close": "64.26",
+          "Volume": "174600",
+          "Adj_Close": "64.26"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-20",
+          "Open": "63.38",
+          "High": "63.71",
+          "Low": "62.10",
+          "Close": "63.25",
+          "Volume": "163000",
+          "Adj_Close": "63.25"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-19",
+          "Open": "63.17",
+          "High": "64.27",
+          "Low": "63.15",
+          "Close": "63.42",
+          "Volume": "125400",
+          "Adj_Close": "63.42"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-16",
+          "Open": "63.71",
+          "High": "63.83",
+          "Low": "63.15",
+          "Close": "63.30",
+          "Volume": "224100",
+          "Adj_Close": "63.30"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-15",
+          "Open": "62.91",
+          "High": "63.72",
+          "Low": "62.69",
+          "Close": "63.46",
+          "Volume": "185100",
+          "Adj_Close": "63.46"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-14",
+          "Open": "62.44",
+          "High": "62.93",
+          "Low": "61.70",
+          "Close": "62.39",
+          "Volume": "306200",
+          "Adj_Close": "62.39"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-13",
+          "Open": "63.68",
+          "High": "63.68",
+          "Low": "62.18",
+          "Close": "63.10",
+          "Volume": "157000",
+          "Adj_Close": "63.10"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-12",
+          "Open": "64.88",
+          "High": "65.31",
+          "Low": "63.17",
+          "Close": "63.59",
+          "Volume": "221200",
+          "Adj_Close": "63.59"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-09",
+          "Open": "64.38",
+          "High": "65.13",
+          "Low": "64.08",
+          "Close": "64.77",
+          "Volume": "318000",
+          "Adj_Close": "64.77"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-08",
+          "Open": "62.84",
+          "High": "63.67",
+          "Low": "62.39",
+          "Close": "63.60",
+          "Volume": "275600",
+          "Adj_Close": "63.60"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-07",
+          "Open": "62.17",
+          "High": "63.70",
+          "Low": "61.84",
+          "Close": "63.01",
+          "Volume": "457100",
+          "Adj_Close": "63.01"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-06",
+          "Open": "60.84",
+          "High": "62.34",
+          "Low": "60.27",
+          "Close": "61.93",
+          "Volume": "313600",
+          "Adj_Close": "61.93"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-05",
+          "Open": "59.45",
+          "High": "61.24",
+          "Low": "59.45",
+          "Close": "60.65",
+          "Volume": "321800",
+          "Adj_Close": "60.65"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-02",
+          "Open": "58.85",
+          "High": "59.31",
+          "Low": "57.37",
+          "Close": "58.27",
+          "Volume": "289800",
+          "Adj_Close": "58.27"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-10-01",
+          "Open": "58.34",
+          "High": "59.50",
+          "Low": "57.67",
+          "Close": "58.49",
+          "Volume": "467100",
+          "Adj_Close": "58.49"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-30",
+          "Open": "57.80",
+          "High": "58.35",
+          "Low": "57.20",
+          "Close": "57.82",
+          "Volume": "278500",
+          "Adj_Close": "57.82"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-29",
+          "Open": "55.49",
+          "High": "56.69",
+          "Low": "54.80",
+          "Close": "56.54",
+          "Volume": "429900",
+          "Adj_Close": "56.54"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-28",
+          "Open": "58.16",
+          "High": "58.35",
+          "Low": "56.13",
+          "Close": "56.13",
+          "Volume": "292800",
+          "Adj_Close": "56.13"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-25",
+          "Open": "60.46",
+          "High": "60.46",
+          "Low": "58.26",
+          "Close": "58.35",
+          "Volume": "519000",
+          "Adj_Close": "58.35"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-24",
+          "Open": "58.89",
+          "High": "59.23",
+          "Low": "56.71",
+          "Close": "57.25",
+          "Volume": "552500",
+          "Adj_Close": "57.25"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-23",
+          "Open": "59.53",
+          "High": "59.91",
+          "Low": "58.67",
+          "Close": "58.76",
+          "Volume": "441200",
+          "Adj_Close": "58.76"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-22",
+          "Open": "62.14",
+          "High": "62.36",
+          "Low": "59.52",
+          "Close": "59.57",
+          "Volume": "266600",
+          "Adj_Close": "59.57"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-21",
+          "Open": "61.08",
+          "High": "62.40",
+          "Low": "60.71",
+          "Close": "62.17",
+          "Volume": "229400",
+          "Adj_Close": "62.17"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-18",
+          "Open": "62.42",
+          "High": "62.51",
+          "Low": "60.03",
+          "Close": "61.14",
+          "Volume": "400000",
+          "Adj_Close": "61.14"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-17",
+          "Open": "62.83",
+          "High": "63.40",
+          "Low": "62.37",
+          "Close": "62.84",
+          "Volume": "364800",
+          "Adj_Close": "62.84"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-16",
+          "Open": "63.00",
+          "High": "63.28",
+          "Low": "62.07",
+          "Close": "62.80",
+          "Volume": "257500",
+          "Adj_Close": "62.80"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-15",
+          "Open": "61.83",
+          "High": "62.91",
+          "Low": "61.38",
+          "Close": "62.43",
+          "Volume": "260800",
+          "Adj_Close": "62.43"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-14",
+          "Open": "61.43",
+          "High": "62.46",
+          "Low": "61.36",
+          "Close": "61.84",
+          "Volume": "234300",
+          "Adj_Close": "61.84"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-11",
+          "Open": "62.90",
+          "High": "62.90",
+          "Low": "61.30",
+          "Close": "61.45",
+          "Volume": "254600",
+          "Adj_Close": "61.45"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-10",
+          "Open": "63.12",
+          "High": "63.92",
+          "Low": "62.45",
+          "Close": "62.75",
+          "Volume": "307600",
+          "Adj_Close": "62.75"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-09",
+          "Open": "64.13",
+          "High": "64.64",
+          "Low": "63.20",
+          "Close": "63.35",
+          "Volume": "373800",
+          "Adj_Close": "63.35"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-08",
+          "Open": "61.04",
+          "High": "62.50",
+          "Low": "61.04",
+          "Close": "62.09",
+          "Volume": "273500",
+          "Adj_Close": "62.09"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-07",
+          "Open": "61.16",
+          "High": "61.71",
+          "Low": "60.24",
+          "Close": "60.77",
+          "Volume": "111200",
+          "Adj_Close": "60.77"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-04",
+          "Open": "61.88",
+          "High": "61.88",
+          "Low": "60.16",
+          "Close": "60.55",
+          "Volume": "358100",
+          "Adj_Close": "60.55"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-03",
+          "Open": "62.00",
+          "High": "62.95",
+          "Low": "61.17",
+          "Close": "62.48",
+          "Volume": "275000",
+          "Adj_Close": "62.48"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-02",
+          "Open": "61.35",
+          "High": "62.09",
+          "Low": "60.70",
+          "Close": "61.32",
+          "Volume": "274900",
+          "Adj_Close": "61.32"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-09-01",
+          "Open": "62.02",
+          "High": "62.38",
+          "Low": "60.34",
+          "Close": "61.09",
+          "Volume": "260600",
+          "Adj_Close": "61.09"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-31",
+          "Open": "63.46",
+          "High": "63.70",
+          "Low": "62.44",
+          "Close": "62.91",
+          "Volume": "200200",
+          "Adj_Close": "62.91"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-28",
+          "Open": "63.37",
+          "High": "63.59",
+          "Low": "62.53",
+          "Close": "63.42",
+          "Volume": "225500",
+          "Adj_Close": "63.42"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-27",
+          "Open": "62.72",
+          "High": "63.63",
+          "Low": "62.12",
+          "Close": "63.09",
+          "Volume": "332600",
+          "Adj_Close": "63.09"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-26",
+          "Open": "62.35",
+          "High": "63.38",
+          "Low": "60.98",
+          "Close": "60.98",
+          "Volume": "423100",
+          "Adj_Close": "60.98"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-25",
+          "Open": "60.94",
+          "High": "64.10",
+          "Low": "60.60",
+          "Close": "63.15",
+          "Volume": "610800",
+          "Adj_Close": "63.15"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-24",
+          "Open": "60.98",
+          "High": "61.39",
+          "Low": "57.32",
+          "Close": "59.64",
+          "Volume": "721500",
+          "Adj_Close": "59.64"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-21",
+          "Open": "65.25",
+          "High": "66.07",
+          "Low": "63.57",
+          "Close": "63.57",
+          "Volume": "398900",
+          "Adj_Close": "63.57"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-20",
+          "Open": "68.03",
+          "High": "68.27",
+          "Low": "66.05",
+          "Close": "66.32",
+          "Volume": "318800",
+          "Adj_Close": "66.32"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-19",
+          "Open": "69.81",
+          "High": "69.90",
+          "Low": "68.39",
+          "Close": "68.40",
+          "Volume": "182300",
+          "Adj_Close": "68.40"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-18",
+          "Open": "70.50",
+          "High": "70.84",
+          "Low": "69.92",
+          "Close": "70.15",
+          "Volume": "118300",
+          "Adj_Close": "70.15"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-17",
+          "Open": "71.09",
+          "High": "71.41",
+          "Low": "70.09",
+          "Close": "70.80",
+          "Volume": "164800",
+          "Adj_Close": "70.80"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-14",
+          "Open": "70.90",
+          "High": "71.59",
+          "Low": "70.43",
+          "Close": "70.60",
+          "Volume": "138800",
+          "Adj_Close": "70.60"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-13",
+          "Open": "70.63",
+          "High": "71.85",
+          "Low": "70.62",
+          "Close": "70.94",
+          "Volume": "194300",
+          "Adj_Close": "70.94"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-12",
+          "Open": "71.75",
+          "High": "71.75",
+          "Low": "69.30",
+          "Close": "69.90",
+          "Volume": "393900",
+          "Adj_Close": "69.90"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-11",
+          "Open": "73.39",
+          "High": "73.64",
+          "Low": "72.25",
+          "Close": "72.61",
+          "Volume": "301100",
+          "Adj_Close": "72.61"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-10",
+          "Open": "73.34",
+          "High": "73.77",
+          "Low": "72.72",
+          "Close": "73.59",
+          "Volume": "242800",
+          "Adj_Close": "73.59"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-07",
+          "Open": "73.00",
+          "High": "73.72",
+          "Low": "72.84",
+          "Close": "73.16",
+          "Volume": "218500",
+          "Adj_Close": "73.16"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-06",
+          "Open": "73.29",
+          "High": "73.48",
+          "Low": "72.92",
+          "Close": "73.07",
+          "Volume": "228800",
+          "Adj_Close": "73.07"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-05",
+          "Open": "72.87",
+          "High": "73.64",
+          "Low": "72.52",
+          "Close": "73.20",
+          "Volume": "238500",
+          "Adj_Close": "73.20"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-04",
+          "Open": "71.70",
+          "High": "72.95",
+          "Low": "71.45",
+          "Close": "72.56",
+          "Volume": "453800",
+          "Adj_Close": "72.56"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-08-03",
+          "Open": "71.65",
+          "High": "71.99",
+          "Low": "70.70",
+          "Close": "71.80",
+          "Volume": "422500",
+          "Adj_Close": "71.80"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-31",
+          "Open": "71.00",
+          "High": "71.24",
+          "Low": "69.98",
+          "Close": "70.98",
+          "Volume": "758200",
+          "Adj_Close": "70.98"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-30",
+          "Open": "66.62",
+          "High": "66.86",
+          "Low": "65.42",
+          "Close": "66.57",
+          "Volume": "250100",
+          "Adj_Close": "66.57"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-29",
+          "Open": "66.27",
+          "High": "66.71",
+          "Low": "65.41",
+          "Close": "66.35",
+          "Volume": "268300",
+          "Adj_Close": "66.35"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-28",
+          "Open": "65.27",
+          "High": "66.35",
+          "Low": "65.04",
+          "Close": "66.02",
+          "Volume": "237200",
+          "Adj_Close": "66.02"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-27",
+          "Open": "67.48",
+          "High": "67.48",
+          "Low": "64.93",
+          "Close": "65.00",
+          "Volume": "261700",
+          "Adj_Close": "65.00"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-24",
+          "Open": "67.83",
+          "High": "68.25",
+          "Low": "67.32",
+          "Close": "67.63",
+          "Volume": "185300",
+          "Adj_Close": "67.63"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-23",
+          "Open": "68.79",
+          "High": "69.03",
+          "Low": "67.77",
+          "Close": "68.11",
+          "Volume": "324800",
+          "Adj_Close": "68.11"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-22",
+          "Open": "69.00",
+          "High": "69.52",
+          "Low": "68.47",
+          "Close": "68.50",
+          "Volume": "151700",
+          "Adj_Close": "68.50"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-21",
+          "Open": "70.79",
+          "High": "70.79",
+          "Low": "69.39",
+          "Close": "69.56",
+          "Volume": "202800",
+          "Adj_Close": "69.56"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-20",
+          "Open": "69.18",
+          "High": "70.84",
+          "Low": "68.76",
+          "Close": "70.49",
+          "Volume": "305300",
+          "Adj_Close": "70.49"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-17",
+          "Open": "68.84",
+          "High": "69.19",
+          "Low": "67.92",
+          "Close": "68.71",
+          "Volume": "277600",
+          "Adj_Close": "68.71"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-16",
+          "Open": "68.40",
+          "High": "69.32",
+          "Low": "68.39",
+          "Close": "68.78",
+          "Volume": "202200",
+          "Adj_Close": "68.78"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-15",
+          "Open": "68.22",
+          "High": "68.49",
+          "Low": "67.84",
+          "Close": "68.19",
+          "Volume": "188500",
+          "Adj_Close": "68.19"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-14",
+          "Open": "67.92",
+          "High": "68.50",
+          "Low": "67.65",
+          "Close": "68.48",
+          "Volume": "215900",
+          "Adj_Close": "68.48"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-13",
+          "Open": "66.78",
+          "High": "68.34",
+          "Low": "66.57",
+          "Close": "68.09",
+          "Volume": "263900",
+          "Adj_Close": "68.09"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-10",
+          "Open": "66.10",
+          "High": "66.86",
+          "Low": "65.79",
+          "Close": "66.16",
+          "Volume": "289500",
+          "Adj_Close": "66.16"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-09",
+          "Open": "62.57",
+          "High": "64.21",
+          "Low": "62.35",
+          "Close": "64.03",
+          "Volume": "222700",
+          "Adj_Close": "64.03"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-08",
+          "Open": "61.75",
+          "High": "63.21",
+          "Low": "61.68",
+          "Close": "62.25",
+          "Volume": "290300",
+          "Adj_Close": "62.25"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-07",
+          "Open": "63.67",
+          "High": "64.10",
+          "Low": "61.64",
+          "Close": "61.82",
+          "Volume": "258600",
+          "Adj_Close": "61.82"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-06",
+          "Open": "64.10",
+          "High": "64.68",
+          "Low": "63.50",
+          "Close": "63.69",
+          "Volume": "364200",
+          "Adj_Close": "63.69"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-03",
+          "Open": "65.30",
+          "High": "65.74",
+          "Low": "64.39",
+          "Close": "64.95",
+          "Volume": "243600",
+          "Adj_Close": "64.95"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-02",
+          "Open": "65.51",
+          "High": "66.07",
+          "Low": "65.15",
+          "Close": "65.34",
+          "Volume": "258200",
+          "Adj_Close": "65.34"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-07-01",
+          "Open": "65.38",
+          "High": "66.89",
+          "Low": "64.85",
+          "Close": "65.43",
+          "Volume": "483200",
+          "Adj_Close": "65.43"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-30",
+          "Open": "64.66",
+          "High": "65.53",
+          "Low": "63.90",
+          "Close": "64.63",
+          "Volume": "342800",
+          "Adj_Close": "64.63"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-29",
+          "Open": "64.01",
+          "High": "65.71",
+          "Low": "63.52",
+          "Close": "64.78",
+          "Volume": "353900",
+          "Adj_Close": "64.78"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-26",
+          "Open": "65.95",
+          "High": "67.46",
+          "Low": "65.72",
+          "Close": "66.92",
+          "Volume": "201100",
+          "Adj_Close": "66.92"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-25",
+          "Open": "65.70",
+          "High": "66.82",
+          "Low": "65.65",
+          "Close": "66.16",
+          "Volume": "265400",
+          "Adj_Close": "66.16"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-24",
+          "Open": "67.30",
+          "High": "67.45",
+          "Low": "66.12",
+          "Close": "66.38",
+          "Volume": "406900",
+          "Adj_Close": "66.38"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-23",
+          "Open": "68.00",
+          "High": "68.28",
+          "Low": "67.21",
+          "Close": "67.38",
+          "Volume": "210700",
+          "Adj_Close": "67.38"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-22",
+          "Open": "66.15",
+          "High": "67.64",
+          "Low": "65.45",
+          "Close": "67.54",
+          "Volume": "318000",
+          "Adj_Close": "67.54"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-19",
+          "Open": "65.15",
+          "High": "66.09",
+          "Low": "64.67",
+          "Close": "64.67",
+          "Volume": "320600",
+          "Adj_Close": "64.67"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-18",
+          "Open": "64.25",
+          "High": "65.19",
+          "Low": "62.96",
+          "Close": "65.17",
+          "Volume": "229100",
+          "Adj_Close": "65.17"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-17",
+          "Open": "64.64",
+          "High": "65.12",
+          "Low": "63.92",
+          "Close": "64.27",
+          "Volume": "207200",
+          "Adj_Close": "64.27"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-16",
+          "Open": "63.99",
+          "High": "64.65",
+          "Low": "63.22",
+          "Close": "64.56",
+          "Volume": "305000",
+          "Adj_Close": "64.56"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-15",
+          "Open": "64.41",
+          "High": "65.17",
+          "Low": "63.98",
+          "Close": "64.59",
+          "Volume": "234600",
+          "Adj_Close": "64.59"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-12",
+          "Open": "66.91",
+          "High": "66.91",
+          "Low": "64.50",
+          "Close": "65.32",
+          "Volume": "352500",
+          "Adj_Close": "65.32"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-11",
+          "Open": "68.60",
+          "High": "69.70",
+          "Low": "67.63",
+          "Close": "67.94",
+          "Volume": "408400",
+          "Adj_Close": "66.09"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-10",
+          "Open": "66.19",
+          "High": "68.86",
+          "Low": "65.73",
+          "Close": "68.40",
+          "Volume": "354600",
+          "Adj_Close": "66.53748"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-09",
+          "Open": "65.65",
+          "High": "66.48",
+          "Low": "65.45",
+          "Close": "66.30",
+          "Volume": "307400",
+          "Adj_Close": "64.49466"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-08",
+          "Open": "66.05",
+          "High": "66.21",
+          "Low": "65.35",
+          "Close": "65.63",
+          "Volume": "190300",
+          "Adj_Close": "63.8429"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-05",
+          "Open": "66.73",
+          "High": "66.97",
+          "Low": "65.62",
+          "Close": "66.13",
+          "Volume": "235800",
+          "Adj_Close": "64.32928"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-04",
+          "Open": "67.53",
+          "High": "68.00",
+          "Low": "65.51",
+          "Close": "67.08",
+          "Volume": "267600",
+          "Adj_Close": "65.25342"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-03",
+          "Open": "67.82",
+          "High": "68.39",
+          "Low": "67.30",
+          "Close": "68.00",
+          "Volume": "206600",
+          "Adj_Close": "66.14837"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-02",
+          "Open": "68.99",
+          "High": "72.56",
+          "Low": "67.30",
+          "Close": "67.60",
+          "Volume": "348800",
+          "Adj_Close": "65.75926"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-06-01",
+          "Open": "68.57",
+          "High": "69.38",
+          "Low": "67.57",
+          "Close": "68.34",
+          "Volume": "289400",
+          "Adj_Close": "66.4791"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-29",
+          "Open": "69.60",
+          "High": "69.70",
+          "Low": "67.24",
+          "Close": "67.63",
+          "Volume": "669300",
+          "Adj_Close": "65.78844"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-28",
+          "Open": "70.59",
+          "High": "71.15",
+          "Low": "69.09",
+          "Close": "69.78",
+          "Volume": "264300",
+          "Adj_Close": "67.8799"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-27",
+          "Open": "69.92",
+          "High": "71.24",
+          "Low": "69.58",
+          "Close": "71.15",
+          "Volume": "286200",
+          "Adj_Close": "69.21259"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-26",
+          "Open": "70.09",
+          "High": "70.82",
+          "Low": "69.34",
+          "Close": "69.70",
+          "Volume": "218700",
+          "Adj_Close": "67.80207"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-25",
+          "Open": "70.10",
+          "High": "70.60",
+          "Low": "69.60",
+          "Close": "69.88",
+          "Volume": "39300",
+          "Adj_Close": "67.97717"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-22",
+          "Open": "69.88",
+          "High": "70.59",
+          "Low": "69.88",
+          "Close": "70.26",
+          "Volume": "133700",
+          "Adj_Close": "68.34683"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-21",
+          "Open": "69.65",
+          "High": "70.84",
+          "Low": "69.48",
+          "Close": "70.22",
+          "Volume": "178500",
+          "Adj_Close": "68.30792"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-20",
+          "Open": "70.22",
+          "High": "70.55",
+          "Low": "69.45",
+          "Close": "69.95",
+          "Volume": "184800",
+          "Adj_Close": "68.04527"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-19",
+          "Open": "69.53",
+          "High": "70.73",
+          "Low": "69.36",
+          "Close": "70.35",
+          "Volume": "403200",
+          "Adj_Close": "68.43437"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-18",
+          "Open": "69.21",
+          "High": "69.77",
+          "Low": "68.22",
+          "Close": "69.03",
+          "Volume": "170200",
+          "Adj_Close": "67.15032"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-15",
+          "Open": "70.63",
+          "High": "70.67",
+          "Low": "68.79",
+          "Close": "69.08",
+          "Volume": "220800",
+          "Adj_Close": "67.19896"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-14",
+          "Open": "69.30",
+          "High": "70.55",
+          "Low": "68.74",
+          "Close": "70.49",
+          "Volume": "174800",
+          "Adj_Close": "68.57056"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-13",
+          "Open": "70.51",
+          "High": "70.93",
+          "Low": "69.32",
+          "Close": "69.52",
+          "Volume": "258900",
+          "Adj_Close": "67.62697"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-12",
+          "Open": "71.19",
+          "High": "71.19",
+          "Low": "69.55",
+          "Close": "70.13",
+          "Volume": "335400",
+          "Adj_Close": "68.22036"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-11",
+          "Open": "72.39",
+          "High": "72.53",
+          "Low": "71.16",
+          "Close": "71.53",
+          "Volume": "192100",
+          "Adj_Close": "69.58224"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-08",
+          "Open": "70.28",
+          "High": "72.32",
+          "Low": "70.11",
+          "Close": "72.20",
+          "Volume": "351800",
+          "Adj_Close": "70.234"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-07",
+          "Open": "70.10",
+          "High": "70.55",
+          "Low": "68.03",
+          "Close": "69.91",
+          "Volume": "441000",
+          "Adj_Close": "68.00636"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-06",
+          "Open": "70.75",
+          "High": "72.30",
+          "Low": "70.01",
+          "Close": "70.65",
+          "Volume": "650000",
+          "Adj_Close": "68.72621"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-05",
+          "Open": "74.06",
+          "High": "74.45",
+          "Low": "71.91",
+          "Close": "71.91",
+          "Volume": "408900",
+          "Adj_Close": "69.9519"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-04",
+          "Open": "72.20",
+          "High": "74.48",
+          "Low": "72.15",
+          "Close": "74.39",
+          "Volume": "265800",
+          "Adj_Close": "72.36437"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-05-01",
+          "Open": "71.92",
+          "High": "71.92",
+          "Low": "71.92",
+          "Close": "71.92",
+          "Volume": "000",
+          "Adj_Close": "69.96162"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-30",
+          "Open": "70.62",
+          "High": "72.35",
+          "Low": "68.95",
+          "Close": "71.92",
+          "Volume": "451900",
+          "Adj_Close": "69.96162"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-29",
+          "Open": "72.73",
+          "High": "72.99",
+          "Low": "70.52",
+          "Close": "70.75",
+          "Volume": "254400",
+          "Adj_Close": "68.82348"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-28",
+          "Open": "74.17",
+          "High": "74.17",
+          "Low": "72.20",
+          "Close": "72.47",
+          "Volume": "189700",
+          "Adj_Close": "70.49665"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-27",
+          "Open": "72.00",
+          "High": "74.32",
+          "Low": "71.20",
+          "Close": "74.30",
+          "Volume": "266100",
+          "Adj_Close": "72.27682"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-24",
+          "Open": "72.71",
+          "High": "72.82",
+          "Low": "71.36",
+          "Close": "72.00",
+          "Volume": "225600",
+          "Adj_Close": "70.03945"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-23",
+          "Open": "72.92",
+          "High": "73.33",
+          "Low": "71.81",
+          "Close": "72.38",
+          "Volume": "257100",
+          "Adj_Close": "70.4091"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-22",
+          "Open": "73.39",
+          "High": "73.54",
+          "Low": "71.87",
+          "Close": "72.88",
+          "Volume": "292400",
+          "Adj_Close": "70.89548"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-21",
+          "Open": "73.01",
+          "High": "74.42",
+          "Low": "73.01",
+          "Close": "73.17",
+          "Volume": "258200",
+          "Adj_Close": "71.17759"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-20",
+          "Open": "71.39",
+          "High": "73.10",
+          "Low": "71.38",
+          "Close": "72.90",
+          "Volume": "296300",
+          "Adj_Close": "70.91494"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-17",
+          "Open": "72.27",
+          "High": "72.86",
+          "Low": "70.53",
+          "Close": "71.23",
+          "Volume": "409600",
+          "Adj_Close": "69.29042"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-16",
+          "Open": "73.80",
+          "High": "74.57",
+          "Low": "72.47",
+          "Close": "72.69",
+          "Volume": "282400",
+          "Adj_Close": "70.71066"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-15",
+          "Open": "74.56",
+          "High": "74.97",
+          "Low": "73.83",
+          "Close": "73.88",
+          "Volume": "379900",
+          "Adj_Close": "71.86825"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-14",
+          "Open": "74.13",
+          "High": "74.83",
+          "Low": "73.38",
+          "Close": "74.25",
+          "Volume": "331000",
+          "Adj_Close": "72.22818"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-13",
+          "Open": "75.07",
+          "High": "75.57",
+          "Low": "74.37",
+          "Close": "74.38",
+          "Volume": "279700",
+          "Adj_Close": "72.35464"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-10",
+          "Open": "75.37",
+          "High": "75.75",
+          "Low": "74.11",
+          "Close": "75.35",
+          "Volume": "215500",
+          "Adj_Close": "73.29823"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-09",
+          "Open": "73.92",
+          "High": "75.11",
+          "Low": "73.42",
+          "Close": "75.11",
+          "Volume": "151700",
+          "Adj_Close": "73.06476"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-08",
+          "Open": "75.26",
+          "High": "75.71",
+          "Low": "73.74",
+          "Close": "73.84",
+          "Volume": "221500",
+          "Adj_Close": "71.82934"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-07",
+          "Open": "74.17",
+          "High": "75.44",
+          "Low": "74.17",
+          "Close": "74.89",
+          "Volume": "205600",
+          "Adj_Close": "72.85075"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-06",
+          "Open": "73.97",
+          "High": "73.97",
+          "Low": "73.97",
+          "Close": "73.97",
+          "Volume": "000",
+          "Adj_Close": "71.95581"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-03",
+          "Open": "73.97",
+          "High": "73.97",
+          "Low": "73.97",
+          "Close": "73.97",
+          "Volume": "000",
+          "Adj_Close": "71.95581"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-02",
+          "Open": "74.40",
+          "High": "74.75",
+          "Low": "73.79",
+          "Close": "73.97",
+          "Volume": "161100",
+          "Adj_Close": "71.95581"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-04-01",
+          "Open": "73.60",
+          "High": "74.85",
+          "Low": "73.37",
+          "Close": "74.49",
+          "Volume": "226800",
+          "Adj_Close": "72.46164"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-31",
+          "Open": "74.79",
+          "High": "75.36",
+          "Low": "73.42",
+          "Close": "73.73",
+          "Volume": "377700",
+          "Adj_Close": "71.72234"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-30",
+          "Open": "73.03",
+          "High": "75.06",
+          "Low": "72.80",
+          "Close": "74.81",
+          "Volume": "303800",
+          "Adj_Close": "72.77293"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-27",
+          "Open": "72.56",
+          "High": "73.29",
+          "Low": "71.88",
+          "Close": "72.79",
+          "Volume": "294200",
+          "Adj_Close": "70.80794"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-26",
+          "Open": "72.32",
+          "High": "72.58",
+          "Low": "70.93",
+          "Close": "72.49",
+          "Volume": "313600",
+          "Adj_Close": "70.5161"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-25",
+          "Open": "73.23",
+          "High": "73.33",
+          "Low": "71.97",
+          "Close": "72.91",
+          "Volume": "266200",
+          "Adj_Close": "70.92467"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-24",
+          "Open": "71.75",
+          "High": "73.67",
+          "Low": "71.44",
+          "Close": "73.22",
+          "Volume": "235300",
+          "Adj_Close": "71.22623"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-23",
+          "Open": "72.70",
+          "High": "72.70",
+          "Low": "71.73",
+          "Close": "72.00",
+          "Volume": "227900",
+          "Adj_Close": "70.03945"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-20",
+          "Open": "72.00",
+          "High": "73.47",
+          "Low": "71.34",
+          "Close": "72.60",
+          "Volume": "368600",
+          "Adj_Close": "70.62311"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-19",
+          "Open": "71.28",
+          "High": "72.94",
+          "Low": "71.16",
+          "Close": "71.99",
+          "Volume": "415200",
+          "Adj_Close": "70.02972"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-18",
+          "Open": "71.10",
+          "High": "71.37",
+          "Low": "70.03",
+          "Close": "71.13",
+          "Volume": "379000",
+          "Adj_Close": "69.19313"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-17",
+          "Open": "73.12",
+          "High": "73.12",
+          "Low": "70.55",
+          "Close": "70.96",
+          "Volume": "457600",
+          "Adj_Close": "69.02777"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-16",
+          "Open": "73.24",
+          "High": "73.64",
+          "Low": "72.40",
+          "Close": "73.14",
+          "Volume": "371200",
+          "Adj_Close": "71.1484"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-13",
+          "Open": "73.00",
+          "High": "73.62",
+          "Low": "72.20",
+          "Close": "73.23",
+          "Volume": "251000",
+          "Adj_Close": "71.23596"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-12",
+          "Open": "73.99",
+          "High": "73.99",
+          "Low": "73.05",
+          "Close": "73.16",
+          "Volume": "351800",
+          "Adj_Close": "71.16786"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-11",
+          "Open": "71.03",
+          "High": "73.84",
+          "Low": "71.00",
+          "Close": "73.80",
+          "Volume": "407600",
+          "Adj_Close": "71.79044"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-10",
+          "Open": "70.90",
+          "High": "71.17",
+          "Low": "69.68",
+          "Close": "70.56",
+          "Volume": "431200",
+          "Adj_Close": "68.63866"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-09",
+          "Open": "71.01",
+          "High": "71.05",
+          "Low": "69.64",
+          "Close": "70.88",
+          "Volume": "414300",
+          "Adj_Close": "68.94994"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-06",
+          "Open": "70.25",
+          "High": "72.49",
+          "Low": "70.11",
+          "Close": "70.97",
+          "Volume": "595400",
+          "Adj_Close": "69.03749"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-05",
+          "Open": "65.00",
+          "High": "70.31",
+          "Low": "64.28",
+          "Close": "69.90",
+          "Volume": "758500",
+          "Adj_Close": "67.99663"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-04",
+          "Open": "66.09",
+          "High": "66.32",
+          "Low": "64.71",
+          "Close": "65.83",
+          "Volume": "338500",
+          "Adj_Close": "64.03746"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-03",
+          "Open": "66.93",
+          "High": "67.88",
+          "Low": "65.92",
+          "Close": "66.12",
+          "Volume": "364600",
+          "Adj_Close": "64.31956"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-03-02",
+          "Open": "66.90",
+          "High": "67.15",
+          "Low": "65.78",
+          "Close": "66.71",
+          "Volume": "290300",
+          "Adj_Close": "64.89349"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-27",
+          "Open": "67.03",
+          "High": "67.47",
+          "Low": "66.35",
+          "Close": "66.92",
+          "Volume": "223400",
+          "Adj_Close": "65.09777"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-26",
+          "Open": "66.23",
+          "High": "67.09",
+          "Low": "65.92",
+          "Close": "66.95",
+          "Volume": "194100",
+          "Adj_Close": "65.12695"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-25",
+          "Open": "66.90",
+          "High": "66.90",
+          "Low": "65.42",
+          "Close": "66.24",
+          "Volume": "296300",
+          "Adj_Close": "64.43629"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-24",
+          "Open": "66.55",
+          "High": "67.12",
+          "Low": "65.80",
+          "Close": "66.95",
+          "Volume": "189300",
+          "Adj_Close": "65.12695"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-23",
+          "Open": "66.49",
+          "High": "66.72",
+          "Low": "65.77",
+          "Close": "66.49",
+          "Volume": "167300",
+          "Adj_Close": "64.67948"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-20",
+          "Open": "65.89",
+          "High": "66.16",
+          "Low": "65.29",
+          "Close": "66.10",
+          "Volume": "226800",
+          "Adj_Close": "64.3001"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-19",
+          "Open": "65.90",
+          "High": "66.38",
+          "Low": "65.44",
+          "Close": "66.06",
+          "Volume": "253100",
+          "Adj_Close": "64.26119"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-18",
+          "Open": "64.55",
+          "High": "66.20",
+          "Low": "64.08",
+          "Close": "66.10",
+          "Volume": "335100",
+          "Adj_Close": "64.3001"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-17",
+          "Open": "65.82",
+          "High": "66.78",
+          "Low": "64.86",
+          "Close": "66.22",
+          "Volume": "183300",
+          "Adj_Close": "64.41684"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-16",
+          "Open": "66.50",
+          "High": "67.21",
+          "Low": "65.83",
+          "Close": "66.11",
+          "Volume": "166700",
+          "Adj_Close": "64.30983"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-13",
+          "Open": "66.22",
+          "High": "67.03",
+          "Low": "66.03",
+          "Close": "66.41",
+          "Volume": "560300",
+          "Adj_Close": "64.60167"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-12",
+          "Open": "64.96",
+          "High": "66.52",
+          "Low": "64.59",
+          "Close": "65.81",
+          "Volume": "295400",
+          "Adj_Close": "64.018"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-11",
+          "Open": "65.10",
+          "High": "65.86",
+          "Low": "63.94",
+          "Close": "65.19",
+          "Volume": "280700",
+          "Adj_Close": "63.41488"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-10",
+          "Open": "64.94",
+          "High": "65.56",
+          "Low": "64.60",
+          "Close": "65.04",
+          "Volume": "329800",
+          "Adj_Close": "63.26897"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-09",
+          "Open": "65.16",
+          "High": "65.28",
+          "Low": "64.28",
+          "Close": "64.94",
+          "Volume": "219900",
+          "Adj_Close": "63.17169"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-06",
+          "Open": "65.29",
+          "High": "65.95",
+          "Low": "63.89",
+          "Close": "65.55",
+          "Volume": "383100",
+          "Adj_Close": "63.76508"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-05",
+          "Open": "64.48",
+          "High": "65.37",
+          "Low": "63.72",
+          "Close": "65.37",
+          "Volume": "310900",
+          "Adj_Close": "63.58998"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-04",
+          "Open": "64.72",
+          "High": "65.22",
+          "Low": "63.70",
+          "Close": "65.22",
+          "Volume": "489300",
+          "Adj_Close": "63.44407"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-03",
+          "Open": "64.44",
+          "High": "66.29",
+          "Low": "64.44",
+          "Close": "64.90",
+          "Volume": "350400",
+          "Adj_Close": "63.13278"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-02-02",
+          "Open": "63.63",
+          "High": "64.76",
+          "Low": "63.41",
+          "Close": "64.25",
+          "Volume": "334000",
+          "Adj_Close": "62.50048"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-30",
+          "Open": "62.93",
+          "High": "64.24",
+          "Low": "62.74",
+          "Close": "63.50",
+          "Volume": "342400",
+          "Adj_Close": "61.7709"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-29",
+          "Open": "61.48",
+          "High": "62.80",
+          "Low": "60.55",
+          "Close": "62.58",
+          "Volume": "387700",
+          "Adj_Close": "60.87595"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-28",
+          "Open": "61.00",
+          "High": "61.76",
+          "Low": "59.99",
+          "Close": "61.76",
+          "Volume": "403600",
+          "Adj_Close": "60.07828"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-27",
+          "Open": "62.03",
+          "High": "62.92",
+          "Low": "59.78",
+          "Close": "60.57",
+          "Volume": "705300",
+          "Adj_Close": "58.92068"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-26",
+          "Open": "61.62",
+          "High": "62.82",
+          "Low": "60.95",
+          "Close": "62.72",
+          "Volume": "310900",
+          "Adj_Close": "61.01214"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-23",
+          "Open": "61.90",
+          "High": "63.37",
+          "Low": "61.19",
+          "Close": "61.65",
+          "Volume": "521600",
+          "Adj_Close": "59.97128"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-22",
+          "Open": "59.80",
+          "High": "61.45",
+          "Low": "59.77",
+          "Close": "61.06",
+          "Volume": "555400",
+          "Adj_Close": "59.39734"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-21",
+          "Open": "59.16",
+          "High": "59.68",
+          "Low": "57.78",
+          "Close": "59.59",
+          "Volume": "477100",
+          "Adj_Close": "57.96737"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-20",
+          "Open": "58.97",
+          "High": "59.60",
+          "Low": "58.63",
+          "Close": "58.91",
+          "Volume": "315200",
+          "Adj_Close": "57.30589"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-19",
+          "Open": "58.31",
+          "High": "58.90",
+          "Low": "57.84",
+          "Close": "58.54",
+          "Volume": "317700",
+          "Adj_Close": "56.94596"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-16",
+          "Open": "57.88",
+          "High": "58.25",
+          "Low": "57.05",
+          "Close": "57.99",
+          "Volume": "366400",
+          "Adj_Close": "56.41094"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-15",
+          "Open": "57.13",
+          "High": "58.45",
+          "Low": "55.54",
+          "Close": "57.94",
+          "Volume": "504300",
+          "Adj_Close": "56.3623"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-14",
+          "Open": "56.76",
+          "High": "58.03",
+          "Low": "56.30",
+          "Close": "56.50",
+          "Volume": "460200",
+          "Adj_Close": "54.96151"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-13",
+          "Open": "54.52",
+          "High": "58.39",
+          "Low": "54.52",
+          "Close": "57.29",
+          "Volume": "610500",
+          "Adj_Close": "55.73"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-12",
+          "Open": "56.05",
+          "High": "56.20",
+          "Low": "53.92",
+          "Close": "54.65",
+          "Volume": "392400",
+          "Adj_Close": "53.16189"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-09",
+          "Open": "53.60",
+          "High": "54.24",
+          "Low": "52.79",
+          "Close": "53.24",
+          "Volume": "213100",
+          "Adj_Close": "51.79028"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-08",
+          "Open": "53.10",
+          "High": "53.95",
+          "Low": "53.00",
+          "Close": "53.67",
+          "Volume": "281800",
+          "Adj_Close": "52.20857"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-07",
+          "Open": "52.23",
+          "High": "52.80",
+          "Low": "51.79",
+          "Close": "52.20",
+          "Volume": "253900",
+          "Adj_Close": "50.7786"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-06",
+          "Open": "51.61",
+          "High": "52.92",
+          "Low": "50.43",
+          "Close": "51.87",
+          "Volume": "272500",
+          "Adj_Close": "50.45758"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-05",
+          "Open": "54.27",
+          "High": "54.77",
+          "Low": "51.35",
+          "Close": "51.58",
+          "Volume": "443500",
+          "Adj_Close": "50.17548"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-02",
+          "Open": "54.97",
+          "High": "55.54",
+          "Low": "54.06",
+          "Close": "54.37",
+          "Volume": "121500",
+          "Adj_Close": "52.88951"
+        },
+        {
+          "Symbol": "AKE.PA",
+          "Date": "2015-01-01",
+          "Open": "55.07",
+          "High": "55.07",
+          "Low": "55.07",
+          "Close": "55.07",
+          "Volume": "000",
+          "Adj_Close": "53.57045"
+        }
+      ]
+    }
+  }
+}
