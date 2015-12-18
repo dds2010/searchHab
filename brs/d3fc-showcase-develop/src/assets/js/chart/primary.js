@@ -139,6 +139,15 @@ export default function() {
 
     // Create and apply the Moving Average
     var movingAverage = fc.indicator.algorithm.movingAverage();
+    var ma20 = fc.indicator.algorithm.movingAverage()
+        .windowSize(20)
+        .value(function(d) { return d.close; })
+        .merge(function(d, m) { d.ma20 = m; });
+    var ma50 = fc.indicator.algorithm.movingAverage()
+        .windowSize(50)
+        .value(function(d) { return d.close; })
+        .merge(function(d, m) { d.ma50 = m; });
+
     var bollingerAlgorithm = fc.indicator.algorithm.bollingerBands();
     var chandelierIndic = chandelierIndicator();
 
@@ -212,6 +221,8 @@ export default function() {
         updateCrosshairDecorate(model.data);
 
         movingAverage(model.data);
+        ma20(model.data);
+        ma50(model.data);
         bollingerAlgorithm(model.data);
         chandelierIndic(model.data);
         // Scale y axis

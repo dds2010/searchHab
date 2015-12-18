@@ -11,16 +11,19 @@ export default function() {
         openValue = function(d, i) { return d.open; },
         dataValue = function(d, i) { return d; };
 
-    var analyseSellBuy = function(dataValue0) {
+    var analyseSellBuy = function(dataValue0, dataValueprec) {
         if (dataValue0.rsi <= 30.0 && !dataValue0.inposition) {
             dataValue0.action = 'buy';
             dataValue0.position = dataValue0.close;
             dataValue0.inposition = true;
         }
         else if (dataValue0.inposition) {
-            if (dataValue0.close > dataValue0.position * 1.03) {
-                dataValue0.action = 'sell';
-                dataValue0.inposition = false;
+            if (dataValue0.ma20 && dataValue0.ma50 && dataValueprec.ma20 && dataValueprec.ma50) {
+                var indic = (dataValue0.ma20 < dataValue0.ma50) && (dataValueprec.ma20 >= dataValueprec.ma50);
+                if (indic && dataValue0.close > dataValue0.position * 1.03) {
+                    dataValue0.action = 'sell';
+                    dataValue0.inposition = false;
+                }
             }
         }
     };
@@ -93,7 +96,7 @@ export default function() {
             dataValue1.position = dataValue0.position;
             analyseday(dataValue0);
             analyseday(dataValue1);
-            analyseSellBuy(dataValue1);
+            analyseSellBuy(dataValue1, dataValue0);
             if (dataValue1.low > dataValue0.high) {
                 return 'gap';
             }

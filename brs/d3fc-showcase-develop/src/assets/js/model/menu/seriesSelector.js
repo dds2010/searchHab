@@ -25,13 +25,21 @@ export default function() {
         /*sel.attr('fill', function(d, i) { return '#AEDEDE'; })
             .attr('stroke', function(d, i) { return '#FFFFFF'; })
             .attr('class', '');*/
+        sel.append('polygon').attr('points', '-10,0 10,0 0,30').attr('fill', function(d, i) {
+            if (d.action === 'sell') {
+                return 'red';
+            }
+            return 0;
+        }).attr('visibility', function(d, i) {
+            if (d.action === 'sell') {
+                return 'visible';
+            }
+            return 'hidden';
+        }).attr('cy', 50);
 
         sel.append('circle')
             .attr('r', function(d, i) {
                 if (d.action === 'buy') {
-                    return 10;
-                }
-                else if (d.action === 'sell') {
                     return 10;
                 }
                 return 0;
@@ -40,14 +48,8 @@ export default function() {
                 if (d.action === 'buy') {
                     return 'green';
                 }
-                else if (d.action === 'sell') {
-                    return 'red';
-                }
                 return 0;
             }).attr('cy', 50);
-        /*sel.select('circle')
-            .attr('cx', function(d) { return d.target ? 100 : 20; })
-            .attr('cy', function(d) { return d.target ? 100 : 60; });*/
     });
 
     var point = fc.series.point();
