@@ -6,6 +6,7 @@ import model from './model/model';
 import menu from './menu/menu';
 import util from './util/util';
 import event from './event';
+import Cac40 from './data/cac40';
 import dataInterface from './data/dataInterface';
 
 export default function() {
@@ -53,30 +54,27 @@ export default function() {
         d3TimeInterval: {unit: d3.time.minute, value: 1},
         timeFormat: '%H:%M'});
 
-    var generated = model.data.product({
-        display: 'AXA',
-        volumeFormat: '.3s',
-        periods: [day1]
-    });
-    var total = model.data.product({
-        display: 'TOTAL',
-        volumeFormat: '.3s',
-        periods: [day1]
-    });
-    var bitcoin = model.data.product({
-        display: 'Bitcoin',
-        volumeFormat: '.2f',
-        periods: [minute1, minute5, hour1]
-    });
+    //var liste = ['CS.PA', 'FP.PA', 'AKE.PA', 'SGO.PA', 'AIR.PA', 'SU.PA', 'TMM.PA', 'RNO.PA', 'BN.PA', 'OR.PA', 'SAN.PA', 'AC.PA', 'VIE.PA'];
+    var liste = new Cac40().get();
 
-    var primaryChartModel = model.chart.primary(generated);
-    var secondaryChartModel = model.chart.secondary(generated);
+    var tab = [];
+    for (var l = 0; l < liste.length; l++) {
+        tab.push(model.data.product({
+            display: liste[l][1],
+            filename: liste[l][2] + '.PA',
+            volumeFormat: '.3s',
+            periods: [day1]
+        }));
+    }
+
+    var primaryChartModel = model.chart.primary(tab[0]);
+    var secondaryChartModel = model.chart.secondary(tab[0]);
     var selectorsModel = model.menu.selectors();
     var xAxisModel = model.chart.xAxis(day1);
     var navModel = model.chart.nav();
     var navResetModel = model.chart.navigationReset();
-    var headMenuModel = model.menu.head([generated, total, bitcoin], generated, day1);
-    var legendModel = model.chart.legend(generated, day1);
+    var headMenuModel = model.menu.head(tab, tab[0], day1);
+    var legendModel = model.chart.legend(tab[0], day1);
 
     var charts = {
         primary: undefined,
@@ -255,11 +253,8 @@ export default function() {
                 loading(true);
                 updateModelSelectedProduct(product.option);
                 updateModelSelectedPeriod(product.option.periods[0]);
-                if (product.option === bitcoin) {
-                    _dataInterface(product.option.periods[0].seconds);
-                } else if (product.option === generated) {
-                    _dataInterface.generateDailyData();
-                }
+                _dataInterface.generateDatas(product.option.filename);
+
                 render();
             })
             .on(event.dataPeriodChange, function(period) {

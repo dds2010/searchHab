@@ -66,9 +66,12 @@ export default function() {
         dispatch[event.dataLoaded](generatedData);
     };
 
-    dataInterface.generateDatas = function() {
+    dataInterface.generateDatas = function(selection) {
         invalidate();
-        d3.json('AKE.PA.json', function(json) {
+        if (!selection) {
+            selection = 'CS.PA';
+        }
+        d3.json(selection + '.json', function(json) {
             var _return = json;
 
             var totalReturned = _return.query.count;

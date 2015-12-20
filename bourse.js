@@ -1,5 +1,11 @@
 var fs = require('fs');
+var datas = require("./brs/data.js");
 
+var rsiIndic = require("./relativeStrengthIndex");
+
+var fc = require("d3fc");
+
+var liste= new datas().get();
 var http = require('http');
 var crontab = require('node-crontab');
 var nodemailer = require('nodemailer');
@@ -60,8 +66,8 @@ var sendMail=function(message){
 
 var getHistoricalQuote=function(name){
 
-    var startDate = '2015-01-01';
-    var endDate = '2015-12-17';
+    var startDate = '2014-10-01';
+    var endDate = '2015-12-19';
     var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+name+'") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
 
 
@@ -84,9 +90,43 @@ var getHistoricalQuote=function(name){
             response.on('end', function(){
         // Data reception is done, do whatever with it!
                 var _return = JSON.parse(body);
-                //console.log(_return);
-                console.log(_return.query);
                  fs.writeFileSync('brs/data/'+name+'.json', JSON.stringify(_return, null, 2));
+                //console.log(_return);
+                //console.log(_return.query);
+                var totalReturned = _return.query.count;
+                //OR: var totalReturned = _return.query.results.quote.length;
+            for (var i = 0; i < totalReturned; ++i) {
+                var stock = _return.query.results.quote[i];
+                //console.log(stock);
+                var symbol = stock.Symbol;
+                stock.date = new Date(stock.Date);
+                stock.date.setHours(0);
+                stock.date.setMinutes(0);
+                stock.date.setSeconds(0);
+                _return.query.results.quote[i] = {
+                    date: stock.date,
+                    open: parseFloat(stock.Open),
+                    high: parseFloat(stock.High),
+                    low: parseFloat(stock.Low),
+                    close: parseFloat(stock.Close),
+                    volume: parseFloat(stock.Volume)
+                };
+            }
+            if(_return.query.results){
+                  var newdata = _return.query.results.quote;
+
+                var rsi = new rsiIndic();
+               
+                var test=rsi(newdata.reverse());
+
+                console.log(name+ " : "+test[test.length-1]);
+                if(test[test.length-1]<30){
+                    console.log("point d'entrée "+name);
+                }
+                console.log(test);
+            }
+          
+                
                  var totalReturned = _return.query.count;
                 //OR: var totalReturned = _return.query.results.quote.length;
                 for (var i = 0; i < totalReturned; ++i) {
@@ -97,7 +137,7 @@ var getHistoricalQuote=function(name){
                     var changeRealTime = stock.ChangeRealtime;
                     
                     //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
-                    console.log(stock.Symbol+" "+stock.Date+" "+stock.Open+" "+stock.High+" "+stock.Low+" "+stock.Close);
+                    //console.log(stock.Symbol+" "+stock.Date+" "+stock.Open+" "+stock.High+" "+stock.Low+" "+stock.Close);
 
                 }
     });
@@ -243,8 +283,17 @@ var ATOUTEUROLAND="FR0010106880.PA";
 
 
 }
-getHistoricalQuote("CS.PA");
-getHistoricalQuote("AKE.PA");
+/*
+ var liste = ['CS.PA', 'FP.PA', 'AKE.PA', 'SGO.PA', 'AIR.PA', 'SU.PA', 'TMM.PA', 
+ 'RNO.PA', 'BN.PA', 'OR.PA', 'SAN.PA', 'AC.PA', 'VIE.PA',
+ 'CAP.PA', 'CGE.PA', 'GLE.PA', 'ACA.PA', 'DX.PA'
+ ];
+*/
+    for (var l = 0; l < liste.length; l++) {
+        getHistoricalQuote(liste[l][2]+'.PA');
+    }
+
+
 
 //getGoogleRealTimeQuote();
 //getYahooRealTimeQuote();
