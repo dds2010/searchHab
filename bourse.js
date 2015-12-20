@@ -117,13 +117,29 @@ var getHistoricalQuote=function(name){
 
                 var rsi = new rsiIndic();
                
-                var test=rsi(newdata.reverse());
+                    var ma100 = fc.indicator.algorithm.movingAverage()
+                        .windowSize(100)
+                        .value(function(d) { return d.close; })
+                        .merge(function(d, m) { d.ma100 = m; });
+                newdata=newdata.reverse();
+                ma100(newdata);
+                var test=rsi(newdata);
 
                 console.log(name+ " : "+test[test.length-1]);
                 if(test[test.length-1]<30){
                     console.log("point d'entrée "+name);
                 }
-                console.log(test);
+                if (newdata[test.length-1].ma100 < newdata[test.length-2].ma100)
+                {
+                    console.log("tendance baisse :"+newdata[test.length-1].ma100);
+                }
+                else {
+                    
+                    console.log("tendance hausse :"+newdata[test.length-1].ma100);
+                
+                }
+                //console.log(newdata[test.length-1]);
+                //console.log(test);
             }
           
                 
