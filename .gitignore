@@ -8,7 +8,8 @@ brs/d3fc-showcase-develop.zip
 node_modules/d3fc/dist/d3fc.bundle.min.js
 node_modules/d3fc/d3fc.d.ts
 brs/data/*.json
-node_modules/**/*.js
+node_modules/*
+service.bat
 brs/data/ABI.BR.json
 brs/data/VIV.PA.json
 brs/data/AI.PA.json
