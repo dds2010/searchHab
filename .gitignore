@@ -7,6 +7,8 @@ node_modules/d3fc/visual-tests/assets/d3fc.css
 brs/d3fc-showcase-develop.zip
 node_modules/d3fc/dist/d3fc.bundle.min.js
 node_modules/d3fc/d3fc.d.ts
+brs/data/*.json
+node_modules/**/*.js
 brs/data/ABI.BR.json
 brs/data/VIV.PA.json
 brs/data/AI.PA.json
@@ -18,3 +20,12 @@ brs/data/EI.PA.json
 brs/data/AC.PA.json
 brs/data/BN.PA.json
 brs/data/DAI.DE.json
+brs/data/DG.PA.json
+brs/data/MC.PA.json
+brs/data/NGI.PA.json
+brs/data/PA.PA.json
+brs/data/CAP.PA.json
+brs/data/TEC.PA.json
+brs/data/MT.PA.json
+brs/data/MT.AS.json
+brs/data/OR.PA.json
