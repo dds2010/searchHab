@@ -23,6 +23,11 @@ export default function() {
                 if (indic && dataValue0.close > dataValue0.position * 1.03) {
                     dataValue0.action = 'sell';
                     dataValue0.inposition = false;
+                    var precGain = 0;
+                    if (dataValue0.gain) {
+                        precGain = dataValue0.gain;
+                    }
+                    dataValue0.gain = dataValue0.close - dataValue0.position + precGain;
                 }
             }
         }
@@ -94,6 +99,7 @@ export default function() {
 
             dataValue1.inposition = dataValue0.inposition;
             dataValue1.position = dataValue0.position;
+            dataValue1.gain = dataValue0.gain;
             analyseday(dataValue0);
             analyseday(dataValue1);
             analyseSellBuy(dataValue1, dataValue0);

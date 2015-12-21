@@ -73,6 +73,7 @@ function findTotalYExtent(visibleData, currentSeries, currentIndicators) {
             throw new Error('Unexpected indicator type');
         }
     }
+    extent[1] = extent[1] + 10;
     return extent;
 }
 
