@@ -47,7 +47,8 @@ var datas = function (){
 	['', 'ANHEUSER-BUSCH INBEV', 'ABI','BR'],
 	['', 'BAYN', 'BAYN','DE'],
 	['', 'SAP', 'SAP','DE'],
-	['', 'DAI', 'DAI','DE']
+	['', 'DAI', 'DAI','DE'],
+	['', 'CAC40', 'CAC','PA']
 	
 	];
 }
