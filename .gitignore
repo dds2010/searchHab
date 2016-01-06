@@ -7,6 +7,7 @@ node_modules/d3fc/visual-tests/assets/d3fc.css
 brs/d3fc-showcase-develop.zip
 node_modules/d3fc/dist/d3fc.bundle.min.js
 node_modules/d3fc/d3fc.d.ts
+brs/data/*/*.json
 brs/data/*.json
 node_modules/*
 service.bat
