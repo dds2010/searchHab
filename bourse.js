@@ -147,12 +147,12 @@ var processQuote=function(_return){
 }
 
 var mergeDatas=function(name){
-        var obj2016 = JSON.parse(fs.readFileSync('brs/data/2016/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
-        var obj2015 = JSON.parse(fs.readFileSync('brs/data/2015/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
-        var obj2014 = JSON.parse(fs.readFileSync('brs/data/2014/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
-        var obj2013 = JSON.parse(fs.readFileSync('brs/data/2013/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
-        if(fs.existsSync('brs/data/2012/'+liste[l][2]+'.'+liste[l][3]+'.json'))
-            var obj2012 = JSON.parse(fs.readFileSync('brs/data/2012/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        var obj2016 = JSON.parse(fs.readFileSync('brs/data/2016/'+name+'.json', 'utf8'));
+        var obj2015 = JSON.parse(fs.readFileSync('brs/data/2015/'+name+'.json', 'utf8'));
+        var obj2014 = JSON.parse(fs.readFileSync('brs/data/2014/'+name+'.json', 'utf8'));
+        var obj2013 = JSON.parse(fs.readFileSync('brs/data/2013/'+name+'.json', 'utf8'));
+        if(fs.existsSync('brs/data/2012/'+name+'.json'))
+            var obj2012 = JSON.parse(fs.readFileSync('brs/data/2012/'+name+'.json', 'utf8'));
 
         if(obj2016.query.results && obj2015.query.results && obj2014.query.results && obj2013.query.results){
             obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2015.query.results.quote);
@@ -164,19 +164,21 @@ var mergeDatas=function(name){
             obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2012.query.results.quote);
         }
         if(obj2016.query.results){
-            fs.writeFileSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json', JSON.stringify(obj2016, null, 2)); 
+            fs.writeFileSync('brs/data/'+name+'.json', JSON.stringify(obj2016, null, 2)); 
         }
         
 
 };
-var getHistoricalQuote=function(name){
+var getHistoricalQuote=function(name,onfinish){
 
     var startDate = '2016-01-01';
     
     var today = new Date(); 
     var endDate = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+    console.log(endDate);
     //var endDate = '2015-12-31';
     var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+name+'") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
+
 
 
     url='/v1/public/yql?q=' + data + "&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
@@ -194,6 +196,7 @@ var getHistoricalQuote=function(name){
                 var _return = JSON.parse(body);
                  fs.writeFileSync('brs/data/2016/'+name+'.json', JSON.stringify(_return, null, 2));
                 //_return =processQuote(_return);
+                onfinish(name);
     });
         });
 
@@ -345,20 +348,23 @@ var ATOUTEUROLAND="FR0010106880.PA";
 */
     for (var l = 0; l < liste.length; l++) {
         //console.log("getHistoricalQuote "+liste[l][2]+'.'+liste[l][3])
-        getHistoricalQuote(liste[l][2]+'.'+liste[l][3]);
-        mergeDatas(liste[l][2]+'.'+liste[l][3]);
-        if(fs.existsSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json')){
-            var obj = JSON.parse(fs.readFileSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        getHistoricalQuote(liste[l][2]+'.'+liste[l][3],function(dataName){
+            console.log("finished");
+            mergeDatas(dataName);
+        if(fs.existsSync('brs/data/'+dataName+'.json')){
+            var obj = JSON.parse(fs.readFileSync('brs/data/'+dataName+'.json', 'utf8'));
             obj =processQuote(obj);
-            analyseQuote(obj.query.results.quote,liste[l][2]+'.'+liste[l][3]);
-            fs.writeFileSync('brs/data/result/'+liste[l][2]+'.'+liste[l][3]+'.json', JSON.stringify(obj, null, 2));
+            analyseQuote(obj.query.results.quote,dataName);
+            fs.writeFileSync('brs/data/result/'+dataName+'.json', JSON.stringify(obj, null, 2));
             var lastdatas=obj.query.results.quote[obj.query.results.quote.length-1];
             if(lastdatas.action){
                 console.log(lastdatas);
-                sendMail(" action sur "+liste[l][2]+'.'+liste[l][3] +" "+lastdatas);
+                sendMail(" action sur "+dataName +" "+lastdatas);
             }
             
         }
+        });
+        /**/
     }
 
 
