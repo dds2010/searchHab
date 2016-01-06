@@ -95,8 +95,12 @@ var analyseQuote=function(newdata,name){
     var sbIndic = new sellBuyIndic();
     sbIndic(newdata);
     var today=newdata[test.length-1];
-    console.log('GAIN: '+today.gain);
-    console.log('GAIN %: '+today.gain*100/today.close);
+    gain=today.gain;
+    if(today.inposition){
+        gain+=today.close-today.position;
+    }
+    console.log(name+' GAIN: '+gain);
+    console.log(name+ ' GAIN %: '+gain*100/today.close);
     /*var today=newdata[test.length-1];
     var yesterday=newdata[test.length-2];
 
@@ -120,7 +124,7 @@ var analyseQuote=function(newdata,name){
 
 }
 var processQuote=function(_return){
-    var totalReturned = _return.query.count;
+    var totalReturned = _return.query.results.quote.length;
             for (var i = 0; i < totalReturned; ++i) {
                 var stock = _return.query.results.quote[i];
                 //console.log(stock);
@@ -141,12 +145,37 @@ var processQuote=function(_return){
     return _return;
 
 }
+
+var mergeDatas=function(name){
+        var obj2016 = JSON.parse(fs.readFileSync('brs/data/2016/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        var obj2015 = JSON.parse(fs.readFileSync('brs/data/2015/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        var obj2014 = JSON.parse(fs.readFileSync('brs/data/2014/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        var obj2013 = JSON.parse(fs.readFileSync('brs/data/2013/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+        if(fs.existsSync('brs/data/2012/'+liste[l][2]+'.'+liste[l][3]+'.json'))
+            var obj2012 = JSON.parse(fs.readFileSync('brs/data/2012/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+
+        if(obj2016.query.results && obj2015.query.results && obj2014.query.results && obj2013.query.results){
+            obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2015.query.results.quote);
+            obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2014.query.results.quote);
+            obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2013.query.results.quote);
+            
+        }
+        if(obj2016.query.results && obj2012 && obj2012.query.results){
+            obj2016.query.results.quote=obj2016.query.results.quote.concat(obj2012.query.results.quote);
+        }
+        if(obj2016.query.results){
+            fs.writeFileSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json', JSON.stringify(obj2016, null, 2)); 
+        }
+        
+
+};
 var getHistoricalQuote=function(name){
 
-    var startDate = '2014-10-01';
-    var endDate = '2015-12-19';
+    var startDate = '2016-01-01';
+    
     var today = new Date(); 
     var endDate = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+    //var endDate = '2015-12-31';
     var data = encodeURIComponent('select * from yahoo.finance.historicaldata where symbol in ("'+name+'") and startDate = "' + startDate + '" and endDate = "' + endDate + '"');
 
 
@@ -162,30 +191,9 @@ var getHistoricalQuote=function(name){
                 body += d;
             });
             response.on('end', function(){
-        // Data reception is done, do whatever with it!
                 var _return = JSON.parse(body);
-                 fs.writeFileSync('brs/data/'+name+'.json', JSON.stringify(_return, null, 2));
-                _return =processQuote(_return);
-
-            if(_return.query.results){
-                var newdata = _return.query.results.quote;
-                analyseQuote(newdata, name);
-            }
-          
-                
-                 var totalReturned = _return.query.count;
-                //OR: var totalReturned = _return.query.results.quote.length;
-                for (var i = 0; i < totalReturned; ++i) {
-                    var stock = _return.query.results.quote[i];
-                    //console.log(stock);
-                    var symbol = stock.Symbol;
-                    var percent_change = stock.Change_PercentChange;
-                    var changeRealTime = stock.ChangeRealtime;
-                    
-                    //console.log(stock.Name+" "+symbol+" "+stock.Ask+" "+percent_change+" "+changeRealTime);
-                    //console.log(stock.Symbol+" "+stock.Date+" "+stock.Open+" "+stock.High+" "+stock.Low+" "+stock.Close);
-
-                }
+                 fs.writeFileSync('brs/data/2016/'+name+'.json', JSON.stringify(_return, null, 2));
+                //_return =processQuote(_return);
     });
         });
 
@@ -338,12 +346,28 @@ var ATOUTEUROLAND="FR0010106880.PA";
     for (var l = 0; l < liste.length; l++) {
         //console.log("getHistoricalQuote "+liste[l][2]+'.'+liste[l][3])
         getHistoricalQuote(liste[l][2]+'.'+liste[l][3]);
+        mergeDatas(liste[l][2]+'.'+liste[l][3]);
+        if(fs.existsSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json')){
+            var obj = JSON.parse(fs.readFileSync('brs/data/'+liste[l][2]+'.'+liste[l][3]+'.json', 'utf8'));
+            obj =processQuote(obj);
+            analyseQuote(obj.query.results.quote,liste[l][2]+'.'+liste[l][3]);
+            fs.writeFileSync('brs/data/result/'+liste[l][2]+'.'+liste[l][3]+'.json', JSON.stringify(obj, null, 2));
+            var lastdatas=obj.query.results.quote[obj.query.results.quote.length-1];
+            if(lastdatas.action){
+                console.log(lastdatas);
+                sendMail(" action sur "+liste[l][2]+'.'+liste[l][3] +" "+lastdatas);
+            }
+            
+        }
     }
 
-var obj = JSON.parse(fs.readFileSync('brs/data/SGO.PA.json', 'utf8'));
-obj =processQuote(obj);
 
-analyseQuote(obj.query.results.quote,"test");
+
+
+//var obj = JSON.parse(fs.readFileSync('brs/data/SGO.PA.json', 'utf8'));
+//obj =processQuote(obj);
+
+//analyseQuote(obj.query.results.quote,"test");
 //console.log(obj.query.results.quote);
 //getGoogleRealTimeQuote();
 //getYahooRealTimeQuote();

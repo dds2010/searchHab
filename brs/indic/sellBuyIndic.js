@@ -9,11 +9,15 @@ var sellBuyIndic = function() {
         dataValue0.position = dataValueprec.position;
         dataValue0.gain = dataValueprec.gain;
 
-        if (dataValue0.rsi <= 30.0 && !dataValue0.inposition) {
+        //console.log("analyse "+" le "+ dataValue0.date);
+        if (!dataValue0.gain) {
+             dataValue0.gain=0;
+        }
+        if (dataValue0.rsi <= 30.0 && !dataValue0.inposition /*&& dataValue0.ma100 > dataValueprec.ma100*/) {
             dataValue0.action = 'buy';
             dataValue0.position = dataValue0.close;
             dataValue0.inposition = true;
-            console.log("buy "+ dataValue0.close);
+            console.log("buy "+ dataValue0.close +" le "+ dataValue0.date);
         }
         else if (dataValue0.inposition) {
             if (dataValue0.mae20 && dataValue0.mae50 && dataValueprec.mae20 && dataValueprec.mae50) {
@@ -40,7 +44,7 @@ var sellBuyIndic = function() {
             var yesterday=values[0];
             analyseSellBuy(today,yesterday);
             if(today.rsi<30){
-                console.log("point d'entrée "+today.rsi);
+                //console.log("point d'entrée "+today.rsi);
             }
             if (today.ma100 < yesterday.ma100) {
                 //console.log("tendance baisse :"+today.ma100);
@@ -50,10 +54,10 @@ var sellBuyIndic = function() {
             }
 
             if (today.mae20 < today.mae50 && yesterday.mae20 >= yesterday.mae50) {
-                console.log("croisement mae baisse "+today.mae20);
+                //console.log("croisement mae baisse "+today.mae20);
             }
             if (today.mae20 > today.mae50 && yesterday.mae20 <= yesterday.mae50) {
-                console.log("croisement mae hausse "+today.mae20);
+                //console.log("croisement mae hausse "+today.mae20);
             }
             //return 100 - (100 / (1 + rs));
         });

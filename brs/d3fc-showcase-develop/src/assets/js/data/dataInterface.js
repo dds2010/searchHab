@@ -73,10 +73,8 @@ export default function() {
         }
         d3.json(selection + '.json', function(json) {
             var _return = json;
-
-            var totalReturned = _return.query.count;
                 //OR: var totalReturned = _return.query.results.quote.length;
-            for (var i = 0; i < totalReturned; ++i) {
+            for (var i = 0; i < _return.query.results.quote.length; ++i) {
                 var stock = _return.query.results.quote[i];
                 //console.log(stock);
                 var symbol = stock.Symbol;
